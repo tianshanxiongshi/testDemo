@@ -1,0 +1,48 @@
+{
+  "pages": [
+ "pages/order/order",
+   "pages/evaluate-list/evaluate-list",
+    "pages/index/index",
+      "pages/goods-detail/goods-detail",
+      "pages/goods-list/goods-list",
+    "pages/goodsInfo/goodsInfo",
+    "pages/buy-tires/buy-tires",
+    "pages/unkeep/unkeep",
+    "pages/evaluate/evaluate",
+    "pages/coupon/coupon",
+    "pages/choose-coupon/choose-coupon",
+    "pages/generalize/generalize",
+    "pages/my-car/my-car",
+    "pages/add-car/add-car",
+    "pages/choose-car/choose-car",
+    "pages/payment/payment",
+    "pages/pay-pwd/pay-pwd",
+    "pages/register/register",
+    "pages/recharge/recharge",
+    "pages/choose-store/choose-store",
+    "pages/current-city/current-city",
+    "pages/quality-car/quality-car",
+    "pages/confirm/confirm",
+    "pages/create-ewm/create-ewm",
+    "pages/my-order/my-order",
+    "pages/personal-info/personal-info",
+    "pages/award/award",
+    "pages/deal-list/deal-list",
+    "pages/member-card/member-card",
+    "pages/pay-result/pay-result",
+    "pages/generalize-ewm/generalize-ewm",
+    "pages/logs/logs",
+    "pages/agreement/agreement",
+    "pages/skip-page/skip-page",
+    "pages/goods-maintain/goods-maintain",
+    "pages/goods-boutique/goods-boutique"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

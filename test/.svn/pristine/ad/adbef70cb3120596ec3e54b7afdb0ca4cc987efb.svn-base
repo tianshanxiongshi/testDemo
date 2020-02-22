@@ -1,0 +1,26 @@
+/* pages/buy-tires/buy-tires.wxss */
+@import "../quality-car/quality-car.wxss";
+.page {
+  padding-bottom: 100rpx;
+}
+.tires-type {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height:100rpx;
+  background:#f3f5fa;
+  border-top:1px solid #e8e8e8;
+  border-bottom:1px solid #e8e8e8;
+  margin-top:-1px;
+}
+.tires-type .line {
+  width: 225rpx;
+	height: 1px;
+	background-color: #333333;
+}
+.tires-type .type {
+  font-size: 36rpx;
+	letter-spacing: 5rpx;
+	color: #333333;
+  font-weight: 700;
+} 

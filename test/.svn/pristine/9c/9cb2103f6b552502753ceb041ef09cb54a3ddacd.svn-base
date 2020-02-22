@@ -1,0 +1,20 @@
+<!--pages/buy-tires/buy-tires.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="car-type">
+    <text>车型：奥迪A6L 2018款 1.8T</text>
+    <image src="../../images/arrow-right.png"></image>
+  </view>
+  <view class="tires-type">
+    <view class="line"></view>
+    <view class="type">16寸轮胎</view>
+    <view class="line"></view>
+  </view>
+  <g-list listInfo="{{ goodsList1 }}"></g-list>
+  <view class="tires-type">
+    <view class="line"></view>
+    <view class="type">17寸轮胎</view>
+    <view class="line"></view>
+  </view>
+  <g-list listInfo="{{ goodsList2 }}"></g-list>
+</view>

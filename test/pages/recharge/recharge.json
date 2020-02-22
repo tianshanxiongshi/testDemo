@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "充值送金额",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

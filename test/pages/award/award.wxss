@@ -1,0 +1,18 @@
+/* pages/award/award.wxss */
+.head {
+  text-align: center;
+  padding: 60rpx 0 55rpx;
+  border-bottom: 1px solid #e8e8e8;
+  background: #f3f5fa;
+}
+.head view:first-child {
+  font-size: 72rpx;
+	letter-spacing: 3rpx;
+	color: #fa5a4c;
+  font-weight: 600;
+}
+.head view:last-child {
+  font-size: 22rpx;
+	color: #333333;
+  font-weight: 600;
+}

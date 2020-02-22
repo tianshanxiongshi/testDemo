@@ -1,0 +1,53 @@
+<!--pages/personal-info/personal-info.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="my-erm">
+    <!-- <canvas canvas-id="barcode" class="barcode"/>  -->
+    <image src="{{ img }}"></image>
+    <view>我的二维码</view>
+    <view class="func" style='display:none;'>
+      <view class="share">
+        <image src="../../images/share.png"></image>
+      </view>
+      <view class="setting">
+        <image src="../../images/setting.png"></image>
+      </view>
+    </view>
+  </view>
+  <!-- <view class="middle">
+    <view class="line"></view>
+    <view class="text">推广统计</view>
+    <view class="line"></view>
+  </view>
+  <view class="count">
+    <view class="count-item">
+      <view>25人</view>
+      <view>已邀请</view>
+    </view>
+    <view class="count-item">
+      <view>18人</view>
+      <view>已充值</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list-item">
+      <view class="item-info">
+        <view>思思默默</view>
+        <view>已充值</view>
+        <view class="baseColr">10000</view>
+      </view>
+      <view class="item-time">2018-08-06 10:20:21</view>
+    </view>
+    <view class="list-item">
+      <view class="item-info">
+        <view>思思默默</view>
+        <view>已充值</view>
+        <view class="baseColr">10000</view>
+      </view>
+      <view class="item-time">2018-08-06 10:20:21</view>
+    </view>
+  </view> -->
+  <statistics-modal list="{{ list }}" total="{{ total }}"></statistics-modal>
+  <view class="bottom" wx:if="{{ isBottom }}">已经是最底部了</view>
+  <empty wx:if="{{ isEmpty }}"></empty>
+</view>

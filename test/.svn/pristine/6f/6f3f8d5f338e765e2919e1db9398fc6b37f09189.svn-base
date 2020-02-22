@@ -1,0 +1,43 @@
+<!--components/statistics/statistics.wxml-->
+<view>
+  <view class="middle">
+    <view class="line"></view>
+    <view class="text">推荐统计</view>
+    <view class="line"></view>
+  </view>
+  <view class="count">
+    <!-- <view class="count-item">
+      <view>25人</view>
+      <view>已邀请</view>
+    </view> -->
+    <view class="count-item">
+      <view>{{ total }}笔</view>
+      <view>已充值</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="list-item" wx:for="{{ list }}" wx:key="index">
+      <view class="item-info">
+        <view>
+          <view>{{ item.rechargeMemberName }}</view>
+          <view class="item-time">{{ item.createTime }}</view>
+        </view>
+        <view wx:if="{{ item.rechargeStatus == 1 }}"> 充值成功 </view>
+        <view wx:else>已退款</view>
+        <view class="baseColr">￥{{ item.newrechargeNum }}元</view>
+        <view  class="baseColr">{{ item.giveMemberValue }}积分</view>
+      </view>
+    </view>
+    <!-- <view class="list-item">
+      <view class="item-info">
+        <view>
+          <view>sdd</view>
+          <view class="item-time">2018-12-12 12:12:12</view>
+        </view>
+        <view> 充值成功 </view>
+        <view class="baseColr">￥10000.00</view>
+        <view  class="baseColr">￥10000.00</view>
+      </view>
+    </view> -->
+  </view>
+</view>

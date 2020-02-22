@@ -1,0 +1,11 @@
+/* components/tpline/tpline.wxss */
+.top-line {
+  height: 1px;
+  width: 750rpx;
+  background: #dadada;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}

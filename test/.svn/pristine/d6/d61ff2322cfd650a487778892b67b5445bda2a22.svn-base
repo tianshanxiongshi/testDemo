@@ -1,0 +1,35 @@
+<!--pages/pay-pwd/pay-pwd.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="register">
+    <form bindsubmit="formSubmit" >
+      <view class="section">
+        <view class="label">请输入你的手机号</view>
+        <input name="mobile" type="number" placeholder="请输入手机号" value="{{ memberInfo.fromatmemberTel }}" placeholder-class="place-holder" disabled/>
+      </view>
+      <view class="section">
+        <view class="label">请输入验证码</view>
+        <view style="position:relative;">
+          <input class="dynamicPwd" type="number" name="authCode" placeholder="请输入验证码" placeholder-class="place-holder" bindinput='clearMsg' />
+          <text class="getDynamicPwd" bindtap="getDynamicPwd">{{ getDynamicPwdText }}</text>
+        </view>
+      </view>
+     
+      <view class="section">
+        <view class="label">请设置你的支付密码</view>
+        <view style="position:relative;">
+          <input class="dynamicPwd" type="number" password name="pwd" placeholder="六位纯数字的支付密码" placeholder-class="place-holder" maxlength='6' bindinput='clearMsg'/>
+        </view>
+      </view>
+      <view class="section">
+        <view class="label">再次输入你的支付密码</view>
+        <input name="pwdAgain" type="number" password placeholder="六位纯数字的支付密码" placeholder-class="place-holder" maxlength='6' bindinput='clearMsg'/>
+      </view>
+      <view class="errMsg" wx:if="{{ errMsg }}"> {{ errMsg }} </view>
+      <view class="btn-area">
+        <button formType="submit" plain>设置</button>
+      </view>
+    </form>
+  </view>
+</view>
+

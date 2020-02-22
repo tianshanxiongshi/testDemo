@@ -1,0 +1,21 @@
+/* pages/quality-car/quality-car.wxss */
+.car-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75rpx;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.car-type text {
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+
+.car-type image {
+  width: 9rpx;
+  height: 17rpx;
+}

@@ -1,0 +1,56 @@
+/* pages/pay-result/pay-result.wxss */
+.page {
+  top: 1px solid #dadada;
+  padding-top: 230rpx;
+}
+.color-style-1 {
+  color: #fa5a4c!important;
+}
+.mg-btm {
+  margin-bottom: 40rpx!important;
+}
+.result {
+  text-align: center;
+}
+.result view {
+  margin-bottom: 15rpx;
+	font-size: 30rpx;
+	color: #333;
+  letter-spacing: r2px;
+  font-weight: 600;
+}
+.result .balance {
+  font-size: 20rpx;
+}
+.success {
+  width: 67rpx;
+  height: 49rpx;
+  vertical-align: middle;
+  margin-right: 11rpx;
+}
+.success2 {
+  vertical-align: middle;
+  margin-right: 20rpx;
+  height: 81rpx;
+  width: 81rpx;
+  margin-top: -8rpx;
+}
+button {
+  width: 234rpx;
+	height: 68rpx;
+  line-height: 68rpx;
+	border-radius: 10rpx;
+	border: solid 1px #000000;
+  margin-top: 52rpx;
+  font-size: 28rpx;
+  color: #333!important;
+}
+.bottom {
+  position: absolute;
+  width: 100%;
+  bottom: 80rpx;
+  margin-bottom: 0!important;
+}
+.bottom view {
+  font-weight: 400!important;
+}

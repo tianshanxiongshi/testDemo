@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择车型",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline",
+    "i-drawer": "/components/drawer/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "交易流水",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline",
+    "empty": "/components/Empty/empty"
+  }
+}

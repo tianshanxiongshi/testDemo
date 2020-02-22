@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "充值协议",
+    "usingComponents": {
+      "top-line": "/components/tpline/tpline"
+    }
+}

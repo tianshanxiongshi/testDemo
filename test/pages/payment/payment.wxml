@@ -1,0 +1,103 @@
+<!--pages/payment/payment.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="box">
+    <view class="shop-name">{{ shopName }}</view>
+    <view class="content">
+      <view class="sum-text">金额</view>
+      <view class="money">
+        <view class="sign">￥</view>
+        <input type="digit" focus="true" bindinput="inputMoney"></input>
+      </view>
+    </view>
+    <view class="item" bindtap='selectCoupon' wx:if="{{ couponNum > 0 }}">
+      <view>优惠券</view>
+      <view>
+        <text wx:if="{{ selectCouponName }}">{{ selectCouponName }}</text>
+        <text wx:else>{{ couponNum }}张可用</text>
+        <image class="arrow-right" src="../../images/down-arrow.png"></image>
+      </view>
+    </view>
+    <view class="item" wx:else>
+      <view>优惠券</view>
+      <view><text wx:if="{{ couponNum != -1 }}">暂无可用优惠券</text><image class="arrow-right" src="../../images/down-arrow.png"></image></view>
+    </view>
+    <view class="item" style="padding:20rpx 0" wx:if="{{ isCanUseInteral }}">
+      <view bindtap='integralExplain'>积分抵扣 <image class="warnImg" src="../../images/warn.png"></image> </view>
+      <view class="integral-deduction">
+        <view class="mgbtm">共{{ totalIntegral }}积分，可用积分<text class="baseColor">{{ canUseIntegral }}</text>，抵<text class="baseColor">¥{{ canDiscountMoney }}</text></view>
+        <!-- <view>使用 <input class="integral-input" type='number' maxlength='{{ length }}' bindinput='print_integral' value='{{ useIntegral }}'></input> 积分，抵扣 <text class="baseColor">¥{{ discountMoney }}</text> </view> -->
+        <view>使用 <text class="integral-input" bindtap='showIntegralBox'>{{ useIntegral }}</text> 积分，抵扣 <text class="baseColor">¥{{ discountMoney }}</text> </view>
+      </view>
+      <view class="select-box" bindtap='checkIntegral'>
+        <image src="{{ ischooseImg }}"></image>
+      </view>
+    </view>
+    <view class="item">
+      <view>实付金额</view>
+      <view class="lastMoney">￥{{ endMoney }}</view>
+    </view>
+    <view class="errMsg" wx:if="{{ errMsg_1 }}"> {{ errMsg_1 }} </view>
+    <button pain bindtap='dopay'>付款</button>
+  </view>
+  <view wx:if="{{ isEnterIntetral }}">
+     <view class="cover"></view>
+    <view class="pop-pay">
+      <view class="head">
+        <view class="head-text">积分</view>
+        <view class="close" bindtap='closeIntegral'>X</view>
+      </view>
+      <view class="middle">
+        <view class="pwd-content">
+          <view class="integral-tips">本次最高可用积分{{ canUseIntegral }}，抵￥{{ canDiscountMoney }}</view>
+          <input type="number" class="Integral-input" bindinput="enterIntegral" placeholder-class='holder-style' placeholder='请输入使用积分' value="{{ tempIntegral }}"></input>
+        </view>
+        <view class="errMsg" wx:if="{{ errMsg_2 }}"> {{ errMsg_2 }} </view>
+        <button pain bindtap='confirmIntegral'>确认</button>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{ showPwd }}">
+    <view class="cover"></view>
+    <view class="pop-pay">
+      <view class="cover" wx:if="{{ isSubmit }}" style="zIndex:101;"></view>
+      <view class="head">
+        <view class="head-text">支付</view>
+        <view class="close" bindtap='closePay'>X</view>
+        <view class="forget" bindtap='forgetPwd'>忘记密码</view>
+      </view>
+      <view class="middle">
+        <view class="middle-name">付款给{{ shopName }}</view>
+        <view class="middle-money">
+          <text>￥</text>
+          <text>{{ endMoney }}</text>
+        </view>
+        <view class="pwd-content">
+          <view class="inputs">
+            <view class="input_box">{{ arr[0] }}</view>
+            <view class="input_box">{{ arr[1] }}</view>
+            <view class="input_box">{{ arr[2] }}</view>
+            <view class="input_box">{{ arr[3] }}</view>
+            <view class="input_box">{{ arr[4] }}</view>
+            <view class="input_box">{{ arr[5] }}</view>
+          </view>
+          <input type="number" class="M-input" bindinput="enterpwd" maxlength='6' focus='true' cursor='10' cursor-spacing="100px"></input>
+        </view>
+        <view class="errMsg" wx:if="{{ errMsg }}"> {{ errMsg }} </view>
+        <button pain bindtap='confirmPay'>确认支付</button>
+      </view>
+    </view>
+  </view>
+  <base-modal id="modal">
+    <view slot="dialog" class="modal-view">
+      <view class="modal-title">积分抵扣规则</view>
+      <view class="modal-content">
+        <view class="modal-item">
+          <view>① 积分可抵扣用户的消费金额，每10积分抵1元，最高可抵金额的50%；</view>
+          <view>② 消费金额不得小于100元；</view>
+          <view>③ 积分支付的积分额必须是10的整数倍。</view>
+        </view>
+      </view>
+    </view>
+  </base-modal>
+</view>

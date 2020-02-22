@@ -1,0 +1,160 @@
+/* pages/unkeep/unkeep.wxss */
+.page {
+  background: #f3f5fa;
+  padding-bottom: 150rpx;
+}
+.mgbtm {
+  margin-bottom: 16rpx;
+}
+.top {
+  background: #ffffff;
+  margin-bottom: 16rpx;
+}
+.flow {
+  background: #ffffff;
+}
+.top {
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top view {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+.top view {
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+  font-weight: 600;
+}
+.top .car-type {
+  border-right: 1px solid #dadada;
+	color: #666666; 
+}
+.top .mileage {
+	color: #333333;
+}
+.top .mileage input {
+  display:inline-block;
+  vertical-align:middle;
+  width:100rpx;
+  margin-top: -1rpx;
+}
+.flow-title {
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #333333;
+  font-weight: 600;
+  padding: 26rpx 0 30rpx 30rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+.flow-chart {
+  padding: 26rpx 77rpx 36rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.flow-chart text {
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.flow-chart .line {
+  position: absolute;
+  height: 17rpx;
+  width: 510rpx;
+  background: #fa5a4c;
+  top: 60rpx;
+  left: 120rpx;
+}
+.flow-chart .box {
+  height: 86rpx;
+  width: 86rpx;
+  background: #fa5a4c;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+.flow-chart .box image {
+  margin: auto;
+}
+.orderImg {
+  height: 37rpx;
+  width: 35rpx;
+}
+.storeImg {
+  width: 41rpx;
+  height: 36rpx;
+} 
+.installImg {
+  width: 36rpx;
+  height: 37rpx;
+}
+
+.item-title {
+  text-align: center;
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #999999;
+  font-weight: 600;
+  padding: 25rpx;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+.item-info {
+  background: #ffffff;
+}
+.item-info .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 30rpx;
+  border-bottom:1px solid #e8e8e8;
+}
+.info .info-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-name .details view:first-child {
+  font-size: 28rpx;
+	letter-spacing: 4rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.info-name .details view:last-child {
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #999999;
+}
+.info-name image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 20rpx;
+}
+.info .info-price {
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #fa5a4c;
+  font-weight: 600;
+}
+
+.next-page {
+  position: fixed;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #ffffff;
+  font-weight: 600;
+  background: #fa5a4c;
+}

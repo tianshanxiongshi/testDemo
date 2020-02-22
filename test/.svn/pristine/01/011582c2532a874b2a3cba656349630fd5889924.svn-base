@@ -1,0 +1,12 @@
+<!--pages/meal/meal.wxml-->
+<view class="meal">
+ <top-line></top-line>
+ <view>
+  <view>
+    <text></text>
+  </view>
+  <view></view>
+ </view>
+ <view></view>
+ <view></view>
+</view>

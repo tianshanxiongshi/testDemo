@@ -1,0 +1,84 @@
+<!--pages/evaluate-list/evaluate-list.wxml-->
+<!-- 评价列表 -->
+<view class="evaluate_list">
+  <view class="tab" >
+    <text class="{{evaluateNum==1?'setColor':''}}" bindtap="setEvaluate" data-idx="1">
+    全部9999+
+    <text class="{{evaluateNum==1?'line':''}}"></text>
+    </text>
+   <text class="{{evaluateNum==2?'setColor':''}}" bindtap="setEvaluate" data-idx="2">
+    有图9999+
+    <text class="{{evaluateNum==2?'line':''}}"></text>    
+    </text>
+  </view>
+
+  <!-- 全部 -->
+  <view class="evaluate_detail" wx:if="{{evaluateNum==1}}" wx:for="{{5}}">
+  <view class="evaluate_img">
+     <view class="evaluate_left">
+       <image src='../../images/card_bg.png'></image>
+     </view>
+     <view class="evaluate_right">
+       <view class="name">
+           <text>小明</text>
+           <text>奥迪A6L</text>
+           <text>2018-07-28</text>
+       </view>
+       <view class="star">
+         <text></text>
+         <text></text>
+         <text></text>
+         <text></text>
+         <text></text>
+       </view>
+       <view class="te_1">
+          <text>感觉还不错，挺耐用的感觉还不错，挺耐用的感觉
+还不错，挺耐用的感觉还不错，挺耐用的感觉还不
+错，挺耐用的感觉还不错，挺耐用的感觉还不错...</text>
+       </view>
+       <view class="i_mg">
+         <image src='../../images/card_bg.png' wx:for="{{9}}"></image>
+       </view>
+       <view class="addres">
+          <text>深圳奥羽4S店</text>
+        <text class="text_1">购买时间：2018-07-28</text>
+       </view>
+     </view>
+  </view>
+  </view>
+
+   <!-- 有图 -->
+  <view class="evaluate_detail" wx:if="{{evaluateNum==2}}" wx:for="{{3}}">
+  <view class="evaluate_img">
+     <view class="evaluate_left">
+       <image src='../../images/card_bg.png'></image>
+     </view>
+     <view class="evaluate_right">
+       <view class="name">
+           <text>小明</text>
+           <text>奥迪A6L</text>
+           <text>2018-07-28</text>
+       </view>
+       <view class="star">
+         <text></text>
+         <text></text>
+         <text></text>
+         <text></text>
+         <text></text>
+       </view>
+       <view class="te_1">
+          <text>感觉还不错，挺耐用的感觉还不错，挺耐用的感觉
+还不错，挺耐用的感觉还不错，挺耐用的感觉还不
+错，挺耐用的感觉还不错，挺耐用的感觉还不错...</text>
+       </view>
+       <view class="i_mg">
+         <image src='../../images/card_bg.png' wx:for="{{9}}"></image>
+       </view>
+       <view class="addres">
+          <text>深圳奥羽4S店</text>
+        <text class="text_1">购买时间：2018-07-28</text>
+       </view>
+     </view>
+  </view>
+  </view>
+</view>

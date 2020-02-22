@@ -1,0 +1,152 @@
+/* pages/recharge/recharge.wxss */
+page {
+  height: 100%;
+}
+.page {
+  min-height: 100%;
+  background: #f3f5fa;
+  overflow: hidden;
+}
+.top {
+  padding: 35rpx 0 40rpx 32rpx;
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #333333;
+  font-weight: 600;
+  background: #ffffff;
+}
+.count {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 42rpx;
+  background: #f3f5fa;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+.count view {
+  font-size: 48rpx;
+	letter-spacing: 7rpx;
+	color: #fa5a4c;
+  font-weight: 700;
+}
+.money view:last-child {
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-weight: 600;
+}
+.recharge-modal {
+  padding-bottom: 155rpx;
+  border-bottom: 1px solid #e8e8e8;
+  background: #ffffff;
+  overflow: hidden;
+}
+.explain {
+  text-align: center;
+  margin: 27rpx 0;
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #fa5a4c;
+  font-weight: 600;
+}
+.select {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30rpx;
+  height:238rpx;
+  align-content:space-between;
+}
+.select view {
+  width: 219rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-sizing: border-box;
+  border: 1px solid #666666;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #666666;
+  text-align: center;
+  font-weight: 600;
+}
+.select view.choose {
+  border-color: #fa5a4c;
+  color: #fa5a4c;
+}
+.confirm {
+  padding: 25rpx 85rpx 0;
+}
+.confirm-explain {
+  text-align: center;
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #999999;
+  margin-bottom: 18rpx;
+}
+.confirm-explain navigator {
+  color: #fa5a4c;
+  display: inline;
+}
+
+button {
+  border-color: transparent!important;
+  background-color: #fa5a4c!important;
+	border-radius: 10rpx;
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #ffffff!important;
+  font-weight: 600;
+}
+.tips {
+  padding: 45rpx 0 20rpx 32rpx;
+}
+.tips view {
+  font-size: 20rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+  margin-bottom: 22rpx;
+}
+.isRefer {
+  opacity: 0.6;
+}
+
+
+.cover {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.54);
+}
+.cover .box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 650rpx;
+  height: 300rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  transform: translate(-50%, -50%);
+}
+.cover .box  view{
+  font-size: 30rpx;
+  color: #999999;
+  line-height: 50rpx;
+  padding-left:30rpx;
+}
+.cover .box  view.tips {
+  font-size: 36rpx;
+  text-align: center;
+  padding: 30rpx 0;
+  color: #323232;
+}
+.cover .box button {
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  right: 0;
+  width: 90%;
+}

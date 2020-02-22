@@ -1,0 +1,179 @@
+/* pages/confirm/confirm.wxss */
+.page {
+  padding-bottom: 150rpx;
+}
+.bdbtm {
+  border-bottom: 1px solid #e8e8e8;
+}
+.mgbtm {
+  margin-bottom: 12rpx;
+}
+.baseColor {
+  color:#fa5a4c!important;
+}
+.cut-off {
+  height: 16rpx;
+  background: #f3f5fa;
+}
+.personImg {
+  width: 29rpx;
+  height: 26rpx;
+  margin-right: 19rpx;
+}
+.mobileImg {
+  width: 18rpx;
+  height: 28rpx;
+  margin-right: 15rpx;
+  vertical-align: middle;
+}
+.arrowRImg {
+  width: 9rpx;
+  height: 17rpx;
+  margin-left: 77rpx;
+}
+.locationImg {
+  width: 21rpx;
+  height: 29rpx;
+  margin-right: 6rpx;
+}
+.warnImg {
+  height: 22rpx;
+  width: 22rpx;
+}
+.userInfo {
+  padding: 26rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name text, .mobile text {
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.chooseStore, .chooseTime {
+  padding: 25rpx 30rpx;
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.chooseStore {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goodsList {
+  padding: 28rpx 0 25rpx 30rpx;
+}
+.goods-box {
+  width: 117rpx;
+  height: 116rpx;
+  box-sizing: border-box;
+  background: #e8e8e8;
+  margin-right: 33rpx;
+  margin-bottom: 28rpx;
+}
+.server-box {
+  border-radius: 10rpx;
+  border: 1px solid #666666;
+}
+.goodsTotal {
+  font-size: 20rpx;
+	letter-spacing: 3rpx;
+	color: #666666;
+  font-weight: 600;
+}
+.coupon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:32rpx 30rpx;
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.coupon .arrowRImg {
+  margin-left: 20rpx;
+}
+
+.item {
+  padding: 0 30rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.item view {
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+
+.select-box {
+  height: 35rpx;
+  width: 35rpx;
+  /* border-radius: 50%;
+  border:1px solid #666666; */
+}
+.select-box image {
+  height: 100%;
+  width: 100%;
+}
+.integral-input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 97rpx;
+	height: 31rpx;
+  min-height: 31rpx;
+	border-radius: 6rpx;
+	border: solid 1px #666666;
+  text-align: center;
+}
+.integral-deduction view {
+  font-size: 18rpx;
+	color: #666666;
+}
+.submit-bottom {
+  position: fixed;
+  height: 98rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.payMoney {
+  width: 259rpx;
+  height: 98rpx;
+  text-align: center;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.payMoney view {
+  color: #333333;
+  font-size: 24rpx;
+  letter-spacing: 3rpx;
+  font-weight: 600;
+}
+.payMoney view:first-child  {
+  letter-spacing: 8rpx;
+}
+.sumbit {
+  width: 491rpx;
+  height: 95rpx;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 30rpx;
+	letter-spacing: 4rpx;
+	color: #ffffff;
+  font-weight: 600;
+  background: #fa5a4c;
+}

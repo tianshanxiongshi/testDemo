@@ -1,0 +1,48 @@
+<!--pages/goods-maintain/goods-maintain.wxml-->
+<!-- 购买保养 -->
+<view class="goods_list">
+  <top-line></top-line>
+  <view class="car_type">
+    <view class="type">
+      <text class="te_1" wx:if="{{carInfo}}">车型：<text>{{carInfo.carBrandName}}</text>
+      <text>{{carInfo.carSeriesName}}</text>
+      <text>{{carInfo.carModelName}}</text> </text>
+      <text class="te_1" wx:else>请选择车型</text>
+      <text class="iconfont icon-youjiantou youjiantou" bindtap="goMyCar"></text>
+    </view>
+  </view>
+  <view>
+    <view class="detail">
+      <view class="size">
+       
+      </view>
+      <view class="goods_detail">
+        <view class="goods_img">
+          <image src="../../images/card_bg.png"></image>
+        </view>
+        <view class="introduce">
+          <view class="goods_name">
+            <text>任E行雷达扫描监控 ALTIMAX GC</text>
+            <text>行车记录仪</text>
+          </view>
+          <view class="discount">
+            <text class="te_t1">秒杀</text>
+            <text class="te_t2">满399-30</text>
+          </view>
+          <view class="goods_price">
+            <text>已售1100件丨1522人评论</text>
+            <text class="te_price">¥519.00</text>
+          </view>
+          <view class="address">
+            <text >深圳奥羽4S店</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+     <view>
+     
+     </view>
+  </view>
+</view>

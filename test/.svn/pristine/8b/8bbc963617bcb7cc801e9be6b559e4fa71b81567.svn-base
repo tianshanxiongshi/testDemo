@@ -1,0 +1,16 @@
+<!--components/goods-item/goods-item.wxml-->
+<view class="goods-item">
+  <image src=""></image>
+  <view class="item-info">
+    <view class="title">
+      {{ goodsInfo.title }}
+    </view>
+    <view class="activity">
+      <text class="{{ item.type == 1 ? 'seckill' : '' }}" wx:for="{{ goodsInfo.activity }}" wx:item="item" wx:key="index">{{ item.name }}</text>
+    </view>
+    <view class="attr">
+      <text>已售{{ goodsInfo.saleNo }}件丨{{ goodsInfo.evaluate }}人评论</text>
+      <text class="money">¥{{ goodsInfo.price }}</text>
+    </view>
+  </view>
+</view>

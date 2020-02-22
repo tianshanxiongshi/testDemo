@@ -1,0 +1,94 @@
+<!--pages/coupon/coupon.wxml-->
+<view class="page">
+  <view class="nav">
+    <view class="{{ couponType == 0 ? 'checked' : '' }}" data-status="0" bindtap='tabNav'>满减券</view>
+    <view class="{{ couponType == 1 ? 'checked' : '' }}" data-status="1" bindtap='tabNav'>礼品券</view>
+  </view>
+  <view class="content">
+    <view class="type" wx:if="{{ couponType == 0 }}" wx:for="{{ cutCouponList }}" wx:key="index">
+      <view class="item" >
+        <image class="bg-img" src="../../images/coupon-bg-unuse.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">满减券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><text>￥</text>{{ item.filterCouponMoney }}</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="type ticket-type" wx:if="{{ couponType == 1 }}" wx:for="{{ giftCouponList }}" wx:key="index">
+      <view class="item">
+        <image class="bg-img" src="../../images/coupon-bg-unuse.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">礼品券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><image class="coupon-log" src="../../images/coupon-log.png"></image> 礼品</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+            <view class="use-tips">券号：{{ item.couponCode }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="loadMore" data-type="1" bindtap='getMore' wx:if="{{ couponType == 0 && loadMore1 || couponType == 1 && loadMore3 }}">查看更多 <image src="../../images/loadMore.png"></image> 
+    </view>
+  </view>
+  <view class="usedCoupon-content" wx:if="{{ couponType == 0 && usedcutCouponList.length || couponType == 1 && usedgiftCouponList.length }}">
+    <view class="isUsed-title">{{ used_coupon_title }}</view>
+    <view class="type" wx:if="{{ couponType == 0 }}" wx:for="{{ usedcutCouponList }}" wx:key="index">
+      <view class="item" >
+        <image class="bg-img" src="../../images/coupon-bg-use.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">满减券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><text>￥</text>{{ item.filterCouponMoney }}</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="type ticket-type" wx:if="{{ couponType == 1 }}" wx:for="{{ usedgiftCouponList }}" wx:key="index">
+      <view class="item" >
+        <image class="bg-img" src="../../images/coupon-bg-use.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">礼品券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><image class="coupon-log" src="../../images/coupon-log.png"></image> 礼品</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+            <view class="use-tips">券号：{{ item.couponCode }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="loadMore" data-type="2" bindtap='getMore' wx:if="{{ couponType == 0 && loadMore2 || couponType == 1 && loadMore4 }}">查看更多 <image src="../../images/loadMore.png"></image> 
+    </view>
+  </view>
+</view>

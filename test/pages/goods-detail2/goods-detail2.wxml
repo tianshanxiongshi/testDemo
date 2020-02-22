@@ -1,0 +1,49 @@
+<!--pages/goods-detail2/goods-detail2.wxml-->
+<!-- 商品详细 -->
+<view class="goods-detail-two">
+  <view class="goods_img">
+    <image src='../../images/card_bg.png'></image>
+  </view>
+  <!-- 详情 -->
+  <view class="detail">
+    <view class="detail_img">
+      <image src='../../images/card_bg.png'></image>
+    </view>
+    <view class="Price">
+      <view class="Price_t1">
+        <text>¥299.00</text>
+      </view>
+      <view class="Price_t2">
+        <text class="te_2">已选：</text>
+        <text>17寸 ,</text>
+        <text class="te_1">1件</text>
+      </view>
+    </view>
+  </view>
+  <!-- 尺寸 -->
+  <view class="specifications">
+    <view class="size">
+      <text>尺寸</text>
+      <text class="te_2">17寸EEX</text>
+    </view>
+    <view class="sp_color">
+      <view class="sp_color_l">颜色</view>
+      <view class="sp_color_r">
+        <text class="{{numberTwo==1?'':'te_3'}}" bindtap="setNumberTwo" data-index="1">炫酷黑</text>
+        <text class="{{numberTwo==2?'':'te_3'}}" bindtap="setNumberTwo" data-index="2">宝石蓝</text>
+        <text class="{{numberTwo==3?'':'te_3'}}" bindtap="setNumberTwo" data-index="3">砂光白</text>
+      </view>
+
+    </view>
+  </view>
+  <!-- 购买数量 -->
+  <view class="buy_number">
+    <text class="te_3">购买数量</text>
+    <view class="number_right">
+      <text class="te_t3" bindtap="addNum">+</text>
+      <text class="te_t2">{{addNumber}}</text>
+      <text class="te_t1" bindtap="reduceNum">-</text>
+    </view>
+  </view>
+  <view class="next">下一步</view>
+</view>>

@@ -1,0 +1,44 @@
+<!--pages/my-car/my-car.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <!-- <view class="car-item">
+    <view class="carInfo">
+      <image mode="aspectFit" src="../../images/aodi.png"></image>
+      <view class="name">奥迪A6L 2018款 2.5 FSL 无极 30周年年型 30FSI 风尚型</view>
+    </view>
+    <view class="handle">
+      <view>
+        <image class="ischooseImg" src="../../images/my-car-choose.png"></image>
+        <text>默认车辆</text>
+      </view>
+      <view>
+        <image class="cancelImg" src="../../images/cancel.png"></image>
+        <text>删除</text>
+      </view>
+    </view>
+    <view class="line"></view>
+  </view> -->
+  <view class="car-item" wx:for="{{ carList }}" wx:key="{{ index }}">
+    <view class="carInfo">
+      <image mode="aspectFit" src="../../images/default_car_logo.png"></image>
+      <view class="name">{{ item.carBrandName }} {{ item.carSeriesName }} {{ item.carModelName }}</view>
+    </view>
+    <view class="handle">
+      <view data-id="{{ item.memberCarId }}" data-isDefault="{{ item.isDefaultCar }}" bindtap='setDefaultCar'>
+        <image class="ischooseImg" src="{{ item.isDefaultCar == 0 ? defaultCar : undefaultCar }}"></image>
+        <text>默认车辆</text>
+      </view>
+      <view data-id="{{ item.memberCarId }}" bindtap='cancelCar'>
+        <image class="cancelImg" src="../../images/cancel.png"></image>
+        <text>删除</text>
+      </view>
+      <!-- <view data-id="{{ item.memberCarId }}" bindtap='editCar'>
+        <image class="cancelImg" src="../../images/cancel.png"></image>
+        <text>编辑</text>
+      </view> -->
+    </view>
+    <view class="line"></view>
+  </view>
+  <view class="emptyTip" wx:if="{{ isEmpty }}"> 快去添加爱车吧~ </view>
+  <view class="addCar" bindtap='addCar'>添加爱车</view>
+</view>

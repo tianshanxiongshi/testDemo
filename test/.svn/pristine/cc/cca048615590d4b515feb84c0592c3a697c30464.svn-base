@@ -1,0 +1,63 @@
+/* pages/register/register.js.wxss */
+.page {
+  padding-top: 86rpx;
+}
+.register {
+  margin: auto;
+  width: 575rpx;
+}
+.section {
+  margin-bottom: 40rpx;
+}
+.section .label {
+  font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 38rpx;
+	color: #1a1a1a;
+  padding-left: 36rpx;
+  margin-bottom: 20rpx;
+}
+.section input {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 575rpx;
+  background-color: #eeeeee;
+	border-radius: 10rpx;
+	/* opacity: 0.24; */
+  font-size: 26rpx;
+	color: #666666;
+  padding-left: 33rpx;
+  padding-right:200rpx;
+  box-sizing: border-box;
+}
+.getDynamicPwd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fa5a4c;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 200rpx;
+  text-align: center;
+  background: #cccccc;
+  border-radius: 0 10rpx 10rpx 0;
+  z-index: 10;
+}
+button {
+  height: 90rpx;
+  line-height: 90rpx;
+  border:none!important;
+  background-color: #fa5a4c!important;
+	border-radius: 10rpx;
+  color: #ffffff!important;
+  font-size: 30rpx!important;
+	letter-spacing: 4rpx!important;
+}
+.errMsg {
+  text-align: center;
+  font-size: 26rpx;
+  color: #fa5a4c;
+  margin-bottom: 30rpx;
+}

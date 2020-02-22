@@ -1,0 +1,26 @@
+<!--pages/generalize-ewm/generalize-ewm.wxml-->
+<view class="page">
+  <view class="ewm-box">
+    <view class="ewm"></view>
+    <view class="tg-ewm">我的推广二维码</view>
+  </view>
+  <view class="tips">
+    <view class="title">温馨提示： </view>
+    <view class="tips-item">
+      <text>1.</text>
+      <text>推荐好友首笔成功充值，尊鸿荟按好友首笔充值金额乘以对应百分比奖励推荐人积分；</text>
+    </view>
+    <view class="tips-item">
+      <text>2.</text>
+      <text>积分仅限在尊鸿荟进行使用，消费时可用于抵扣消费金额；</text>
+    </view>
+    <view class="tips-item">
+      <text>3.</text>
+      <text>好友推荐奖将在半小时内发放到您的尊鸿荟账户；</text>
+    </view>
+    <view class="tips-item">
+      <text>4.</text>
+      <text>本推荐奖励规则最终解释权归尊鸿荟所有。</text>
+    </view>
+  </view>
+</view>

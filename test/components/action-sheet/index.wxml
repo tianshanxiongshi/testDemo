@@ -1,0 +1,6 @@
+<view class="i-as-mask i-class-mask {{ visible ? 'i-as-mask-show' : '' }}" bindtap="handleClickMask"></view>
+<view class="i-class i-as {{ visible ? 'i-as-show' : '' }}">
+  <view class="i-as-actions">
+      <slot name="body"></slot>
+  </view>
+</view>

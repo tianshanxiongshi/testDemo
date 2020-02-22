@@ -1,0 +1,70 @@
+<!--pages/unkeep/unkeep.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="top">
+    <view class="car-type">车型：宝马525L 1.8T 2018款 ></view>
+    <view class="mileage">
+      <text>当前里程</text>
+      <input type="number" placeholder='请输入' placeholder-style='color:#999999;'></input>
+      <text>KM</text>
+    </view>
+  </view>
+  <view class="flow">
+    <view class="flow-title">保养流程</view>
+    <view class="flow-chart">
+      <view class="line"></view>
+      <view class="left">
+        <view class="box">
+          <image class="orderImg" src="../../images/order-icon.png"></image>
+        </view>
+        <text>在线选项目</text>
+      </view>
+      <view class="middle">
+        <view class="box">
+          <image class="storeImg" src="../../images/arrive-store.png"></image>
+        </view>
+        <text>下单选门店</text>
+      </view>
+      <view class="right">
+        <view class="box">
+          <image class="installImg" src="../../images/install.png"></image>
+        </view>
+        <text>到店享安装</text>
+      </view>
+    </view>
+  </view>
+  <view class="server-list">
+    <view class="server-item">
+      <view class="item-title">常规保养项目（0/7）</view>
+      <view class="item-info mgbtm">
+        <view class="info">
+          <view class="info-name">
+            <image mode='aspectFit' src="{{ ischooseImg }}"></image>
+            <view class="details">
+              <view>小保养服务</view>
+              <view>5000km或6个月/次</view>
+            </view>
+          </view>
+          <view class="info-price">￥512.00</view>
+        </view>
+        <view>
+          <g-list listInfo="{{ goodsList }}"></g-list>
+        </view>
+      </view>
+      <view class="item-info">
+        <view class="info">
+          <view class="info-name">
+            <image mode='aspectFit' src="{{ ischooseImg }}"></image>
+            <view class="details">
+              <view>小保养服务</view>
+              <view>5000km或6个月/次</view>
+            </view>
+          </view>
+          <view class="info-price">￥512.00</view>
+        </view>
+        <view></view>
+      </view>
+    </view>
+  </view>
+  <view class="next-page">下一页</view>
+</view>

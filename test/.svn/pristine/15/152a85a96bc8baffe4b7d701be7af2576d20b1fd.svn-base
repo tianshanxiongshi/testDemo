@@ -1,0 +1,86 @@
+/* pages/deal-list/deal-list.wxss */
+.page {
+  padding-top: 34rpx;
+}
+.relative {
+  position: relative;
+}
+.pull-down {
+  position: absolute;
+  right: 10rpx;
+  top: 50rpx;
+  width: 150rpx;
+  border: 1px solid #dcdcdc;
+  background: #ffffff;
+  text-align: center;
+}
+.pull-down::before {
+  content: '';
+  position: absolute;
+  right: 10rpx;
+  top: -25rpx;
+  border: 10rpx solid #dcdcdc;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.pull-down view {
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1px solid #dcdcdc;
+}
+.pull-down view:last-child {
+  border-bottom: 0;
+}
+.title,.item {
+  display: flex;
+  justify-content: space-between;
+}
+.title view,.item view {
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: 600;
+}
+.item {
+  padding-bottom: 44rpx;
+}
+.item:first-child {
+  padding-top: 20rpx;
+}
+.item view {
+  font-weight: 400;
+  color: 666;
+  font-size: 20rpx;
+}
+.item .item-time {
+  height:50rpx;
+  line-height:26rpx;
+}
+.item .center {
+  line-height: 50rpx;
+}
+.bottom {
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  padding-bottom: 44rpx;
+}
+.bottom::after,.bottom::before {
+  content: '';
+  display: inline-flex;
+  width: 120rpx;
+  height: 1rpx;
+  background: #dcdcdc;
+  vertical-align: middle;
+  margin: 0 20rpx;
+  margin-top: -6rpx;
+}
+.down-arrow {
+  width: 24rpx;
+  height: 12rpx;
+  vertical-align: middle;
+  margin-left: 5rpx;
+  margin-top: -8rpx;
+}

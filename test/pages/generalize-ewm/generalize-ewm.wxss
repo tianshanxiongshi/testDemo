@@ -1,0 +1,49 @@
+/* pages/generalize-ewm/generalize-ewm.wxss */
+.ewm-box {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  height: 770rpx;
+}
+.ewm {
+  width: 341rpx;
+  height: 343rpx;
+  background: pink;
+  margin: auto;
+  margin-top: 136rpx;
+}
+.tg-ewm {
+  text-align: center;
+  font-size: 36rpx;
+  letter-spacing: 2rpx;
+  color: #333;
+  margin-top: 67rpx;
+}
+.tips {
+  padding: 69rpx 30rpx 0;
+}
+.title {
+  font-size: 20rpx;
+  letter-spacing: 3rpx;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 35rpx;
+}
+.tips-item {
+  display: flex;
+  justify-content: space-between;
+   margin-bottom: 41rpx;
+}
+.tips-item text {
+  font-size: 20rpx;
+  line-height: 29rpx;
+  letter-spacing: 3rpx;
+  color: #333;
+}
+.tips-item text:first-child {
+  
+}
+.tips-item text:last-child {
+  flex: 9;
+  margin-left: 15rpx;
+  text-align: left;
+}

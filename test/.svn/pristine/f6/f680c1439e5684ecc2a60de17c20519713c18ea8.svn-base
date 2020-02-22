@@ -1,0 +1,23 @@
+<!--pages/register/register.js.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="register">
+    <form bindsubmit="formSubmit" >
+      <view class="section">
+        <view class="label">请输入你的手机号</view>
+        <view style="position:relative;">
+          <input class="dynamicPwd" type="number" name="mobile" placeholder="请输入手机号" placeholder-class="place-holder" bindinput="bindKeyInputMobile"/>
+          <text class="getDynamicPwd" bindtap="getDynamicPwd">{{ getDynamicPwdText }}</text>
+        </view>
+      </view>
+      <view class="section">
+        <view class="label">验证码</view>
+        <input name="authCode" type="number" placeholder="请输入验证码" placeholder-class="place-holder" bindinput='clearMsg' />
+      </view>
+      <view class="errMsg" wx:if="{{ errMsg }}"> {{ errMsg }} </view>
+      <view class="btn-area">
+        <button formType="submit" plain>登录</button>
+      </view>
+    </form>
+  </view>
+</view>

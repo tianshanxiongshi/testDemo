@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents":{
+    "base-modal": "/components/mask/mask"
+  },
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,54 @@
+<!--pages/choose-coupon/choose-coupon.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="content" wx:if="{{ cutCouponList.length }}">
+    <view class="type" wx:for="{{ cutCouponList }}" wx:key="index">
+      <view class="item" >
+        <image class="bg-img" src="../../images/coupon-choose-bg.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">满减券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><text>￥</text>{{ item.filterCouponMoney }}</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+          </view>
+          <view class="toUseCoupon" data-info="{{item}}" bindtap='selectCoupon'>
+            <view>立即</view>
+            <view>使用</view>
+            <view wx:if="{{ item.isChecked }}"><image class="arrow" src="../../images/choose.png"></image></view>
+            <view wx:else><image class="arrow" src="../../images/unchoose.png"></image></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="usedCoupon-content" wx:if="{{ usedcutCouponList.length }}">
+    <view class="isUsed-title">不可用优惠券</view>
+    <view class="type" wx:for="{{ usedcutCouponList }}" wx:key="index">
+      <view class="item" >
+        <image class="bg-img" src="../../images/coupon-bg-use.png"></image>
+        <view class="coupon-type-box">
+          <view class="coupon-type">满减券</view>
+        </view>
+        <view class="item-info">
+          <view class="left">
+            <view><text>￥</text>{{ item.filterCouponMoney }}</view>
+          </view>
+          <view class="right">
+            <view class="use-limit">{{ item.couponTitle }}</view>
+            <view class="line"></view>
+            <view class="use-time">{{ item.couponStartTime }} ~ {{ item.couponEndTime }}</view>
+            <view class="use-tips">说明：{{ item.couponRemark }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="emptyTip" wx:if="{{ isEmptyCoupon && isEmptyUsedCoupon }}"> 没有可用优惠券 </view>
+</view>

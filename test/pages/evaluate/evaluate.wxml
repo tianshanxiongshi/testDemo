@@ -1,0 +1,79 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="goods">
+    <image class="goods-img" src=""></image>
+    <view class="goods-info">
+      <view>轮胎轮胎轮胎轮胎轮胎CDIVJJD-DDCV</view>
+      <view class="attr">
+        <text>共1件</text>
+        <text class="base-color">￥280.00</text>
+      </view>
+    </view>
+  </view>
+  <view>
+    <form bindsubmit="bindFormSubmit">
+      <view class="section">
+        <textarea placeholder="评价超过15个字以上，就可获得一定积分~" placeholder-class="area-style" name="textarea"/>
+        <view class="img-list">
+          <image src=""></image>
+          <image src=""></image>
+          <image src=""></image>
+          <image src=""></image>
+          <image src=""></image>
+        </view>
+        <view class="uploadImg">
+          <image src="../../images/upload-img.png"></image>
+        </view>
+      </view>
+      <view class="star">
+        <view class="starOne">
+          <view class="info">
+            <image class="good-pj" src=""></image>
+            <text>商品评价</text>
+          </view>
+          <view>
+            <i-rate 
+              bind:change="onChange1" 
+              value="{{starIndex1}}"
+              size="28">
+              {{starIndex1}}星
+            </i-rate>
+          </view>
+        </view>
+        <view class="starOne">
+          <view class="info">
+            <image class="good-pj" src=""></image>
+            <text>商品评价</text>
+          </view>
+          <view>
+            <i-rate 
+              bind:change="onChange1" 
+              value="{{starIndex1}}"
+              size="28">
+              {{starIndex1}}星
+            </i-rate>
+          </view>
+        </view>
+        <view class="starOne">
+          <view class="info">
+            <image class="good-pj" src=""></image>
+            <text>商品评价</text>
+          </view>
+          <view>
+            <i-rate 
+              bind:change="onChange1" 
+              value="{{starIndex1}}"
+              size="28">
+              {{starIndex1}}星
+            </i-rate>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <view>请输入评价内容</view>
+        <button  hover-class="button-hover" form-type="submit" > 确认提交 </button>
+      </view>
+    </form>
+  </view>
+</view>

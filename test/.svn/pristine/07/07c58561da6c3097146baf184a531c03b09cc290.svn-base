@@ -1,0 +1,122 @@
+<!--pages/order/order.wxml-->
+
+
+<view class="order">
+
+    <view class="o_list">
+        <view class="o_list_item" wx:for="{{5}}">
+           <text class="te_1">机油</text>
+           <view class="vi_price">¥456 <label></label></view>
+        </view>
+    </view>
+
+  <top-line></top-line>
+  <!-- 个人信息 -->
+  <view class="order_merberInfo">
+    <view class="merber_name">
+      <view class="merber_n">
+        <view class="name">
+          <text class="iconfont icon-fl-renyuan icon_t"></text>
+          <text class="iconfont "></text>
+          <text>刘昊霖</text>
+        </view>
+        <view class="phone">
+          <text class="iconfont icon-shouji-tianchong icon_t"></text>
+          <text>13752366211</text>
+          <text class="iconfont icon-youjiantou"></text>
+        </view>
+
+      </view>
+    </view>
+    <view class="store">
+      <view class="store_d">
+        <text>选择服务门店：<text class="iconfont icon-dingweiweizhi icon_t"></text>宝安大铲湾驰宝5S店</text>
+      </view>
+    </view>
+    <view class="time">
+      <view class="time_c">
+        <text>预约到店时间： 2018年5月30日</text>
+        <text>上午9-10点</text>
+        <text class="iconfont ico_1 icon-youjiantou"></text>
+      </view>
+    </view>
+  </view>
+  <!-- 商品信息 -->
+  <view class="blank"></view>
+  <view class="order_list">
+    <view class="order_img">
+      <view class="order_i" >
+        <image src='../../images/圆角矩形6拷贝@2x.png' wx:for="{{3}}"></image>
+        <view class="clear_both"></view>
+      </view>
+      <view class="statistics">
+        <text>共1件商品，2项服务</text>
+      </view>
+    </view>
+    <view class="activity">
+      <view class="activity_discount">
+        <text>活动优惠</text> 
+        <text class="te_t1">2个可用<text class="iconfont icon-youjiantou"></text></text>
+      </view>
+      <view class="Coupon">
+        <text>优惠券</text>
+        <text class="te_t1">2个可用<text class="iconfont icon-youjiantou"></text></text>
+      </view>
+    </view>
+  </view>
+  <view class="blank"></view>
+  <!-- 支付 -->
+  <view class="payment">
+    <view class="total">
+      <view class="contain">
+       <view class="pay_total">
+         <text>支付总额</text>
+         <text class="te_t1">
+         
+         ¥2280.00
+          <text class="iconfont icon-jiantou-1 icon-jiantou-"></text>
+         </text>
+       </view>
+       </view>
+       <view  class="service_list" wx:for="{{4}}"> 
+         <view class="service_item">
+           <text>机油</text>
+           <text class="te_t1">¥280.00</text>
+         </view>
+       </view>
+    </view>
+    <view class="integral">
+       <view class="v_1">
+         <text>积分抵扣</text>
+         <text class="iconfont icon-jinggao"></text>
+       </view>
+       <view class="v_2">
+          <view class="vi_1">
+             <text>共300积分，可用积分</text>
+             <text>30</text>
+             <text>，抵</text>
+             <text>¥3.00</text>
+          </view>
+           <view class="vi_2"> 
+             <text>使用</text>
+             <input value="{{inVal}}" type="text"  id="in_p" style="height:26rpx;" maxlength="5" focus="{{isFocus}}" ></input>
+             <text>积分，抵扣</text>
+             <text>¥1.00</text>
+          </view>
+          
+       </view>
+       <view class="v_3">
+            <text class="iconfont icon-dagou"></text>
+          </view>
+    </view>
+    <view class="pay"> 
+      <view class="real_pay"> 
+      <text class="text1"> 实付款</text>
+      <text class="text2">¥890.00</text>
+      </view>
+      <view class="confirm">
+         确定购买
+      </view>
+    </view>
+  </view>
+</view>

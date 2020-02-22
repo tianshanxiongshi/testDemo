@@ -1,0 +1,89 @@
+<!--pages/confirm/confirm.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="userInfo bdbtm">
+    <view class="name">
+      <image class="personImg" src="../../images/person.png"></image>
+      <text>某某某</text>
+    </view>
+    <view class="mobile">
+      <image class="mobileImg" src="../../images/mobile.png"></image>
+      <text>18507551234</text>
+      <image class="arrowRImg" src="../../images/arrow-right.png"></image>
+    </view>
+  </view>
+  <view class="chooseInfo">
+    <view class="chooseStore bdbtm">
+      <view>
+        <text>选择服务门店：</text>
+        <image class="locationImg" src="../../images/location.png"></image>
+        <text>宝安大铲湾驰宝5S店</text>
+      </view>
+      <image class="arrowRImg" src="../../images/arrow-right.png"></image>
+    </view>
+    <view class="chooseTime">
+      预约到店时间：2018年5月30日  上午9-10点
+    </view>
+  </view>
+  <view class="cut-off"></view>
+  <view class="goodsInfo">
+    <view class="goodsList bdbtm">
+      <view class="goodsImgs">
+        <!-- <view class="goods-box server">
+          <image></image>
+        </view> -->
+        <image class="goods-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+        <image class="goods-box server-box" src=""></image>
+      </view>
+      <view class="goodsTotal">共1件商品，2项服务</view>
+    </view>
+    <view class="coupon">
+      <view>优惠券</view>
+      <view>
+        <text>无可用优惠券</text>
+        <image class="arrowRImg" src="../../images/arrow-right.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="cut-off"></view>
+  <view class="detail">
+    <view class="item">
+      <view>机油</view>
+      <view class="baseColor">￥280.00</view>
+    </view>
+    <view class="item">
+      <view>机油</view>
+      <view class="baseColor">￥280.00</view>
+    </view>
+    <view class="item">
+      <view>机油</view>
+      <view class="baseColor">￥280.00</view>
+    </view>
+    <view class="item">
+      <view>机油</view>
+      <view class="baseColor">￥280.00</view>
+    </view>
+    <view class="item">
+      <view>积分抵扣 <image class="warnImg" src="../../images/warn.png"></image> </view>
+      <view class="integral-deduction">
+        <view class="mgbtm">共300积分，可用积分<text class="baseColor">30</text>，抵<text class="baseColor">¥3.00</text></view>
+        <view>使用 <input class="integral-input" type='number'>10</input> 积分，抵扣 <text class="baseColor">¥1.00</text> </view>
+      </view>
+      <view class="select-box">
+        <image src="{{ ischooseImg }}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="submit-bottom">
+    <view class="payMoney">
+      <view>实付款</view>
+      <view class="baseColor">￥123.00</view>
+    </view>
+    <view class="sumbit">确认购买</view>
+  </view>
+</view>

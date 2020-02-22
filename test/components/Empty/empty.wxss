@@ -1,0 +1,17 @@
+/* components/Empty/empty.wxss */
+.empty {
+  margin: 150rpx 200rpx;
+}
+.empty image {
+  width: 240rpx;
+  height: 135rpx;
+  display: block;
+  margin: 0 auto;
+
+}
+.empty .empty-text {
+  font-size: 33rpx;
+  color: #666;
+  padding-top: 20rpx;
+  text-align:center;
+}

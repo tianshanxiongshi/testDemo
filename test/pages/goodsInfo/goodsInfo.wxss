@@ -1,0 +1,349 @@
+/* pages/goodsInfo/goodsInfo.wxss */
+page, .page{
+  height: 100%;
+}
+.page {
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+swiper {
+  height: 592rpx;
+}
+swiper image {
+  height: 100%;
+  width: 100%;
+}
+.line {
+  height: 16rpx;
+  width: 100%;
+  background: #f3f5fa;
+}
+.tips image {
+  height: 22rpx;
+  width: 22rpx;
+  vertical-align: middle;
+  margin-right: 5rpx;
+}
+.lb {
+  position: relative;
+}
+.dots {
+  position: absolute;
+  right: 31rpx;
+  bottom: 49rpx;
+  font-size: 18rpx;
+  letter-spacing: 3rpx;
+  font-weight: 600;
+  color: #333333;
+}
+/* .goods .activity {
+  display: flex;
+} */
+.middle {
+  padding: 26rpx 30rpx 56rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+.goods .activity text {
+  display: inline-block;
+  padding: 0 14rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border:1px solid #c78c00;
+  color: #c78c00;
+  border-radius: 6rpx;
+  font-size: 18rpx;
+  margin-right: 9rpx;
+}
+.goods .activity text.seckill {
+  color: #fa5a4c;
+  border-color: #fa5a4c;
+  font-size: 20rpx;
+}
+.tips {
+	font-size: 16rpx;
+	font-weight: normal;
+	color: #fa5a4c;
+}
+.tips,.price,.title {
+  margin-bottom: 25rpx
+}
+.price view{
+  display: inline-block;
+}
+.price .new {
+  font-size: 36rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #ff3f2b;
+}
+.price .old {
+  font-size: 24rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #999999;
+  margin: 0 18rpx;
+  text-decoration: line-through;
+}
+.title {
+  font-size: 24rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+}
+.explain {
+  font-size: 20rpx;
+	font-weight: normal;
+	color: #fa5a4c;
+}
+.buy-box {
+  padding: 35rpx 30rpx 49rpx;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.buy-box view:first-child {
+  font-size: 24rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+}
+.count {
+  display: flex;
+  justify-content: space-between;
+}
+.count view {
+  text-align: center;
+  line-height: 50rpx;
+  color: #ffffff;
+}
+.count view:first-child,.count view:last-child {
+  height: 50rpx;
+  width: 50rpx;
+  background-color: #d5d5d5;
+	border-radius: 4rpx;
+}
+.count .num {
+  height: 50rpx;
+  width: 92rpx;
+  background: #f4f5fa;
+  font-size: 24rpx;
+  color: #333333;
+  letter-spacing: 3rpx;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+.nav view {
+  height: 82rpx;
+  line-height: 82rpx;
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+}
+.nav view.active {
+  border-bottom: 2rpx solid #fa5a4c;
+	border-radius: 1px;
+  color: #fa5a4c;
+}
+.step {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 98rpx;
+  line-height: 98rpx;
+	background-color: #fa5a4c;
+  text-align: center;
+  font-size: 30rpx;
+	font-weight: normal;
+	letter-spacing: 4rpx;
+	color: #ffffff;
+  z-index: 99;
+}
+.zIndex1 {
+  z-index: 100;
+}
+.attrBox {
+  height: 807rpx;
+  width: 100%;
+  position: relative;
+}
+.attrTop {
+  padding: 0 30rpx 36rpx;
+  border-bottom: 1px solid #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+}
+.attrTop image {
+  width: 196rpx;
+  height: 196rpx;
+  background: #e1e1e1;
+  margin-top: -38rpx;
+}
+.attrTop .modal-goods {
+  flex: 1;
+  margin-left: 47rpx;
+}
+.modal-goods .modal-goods-price {
+  font-size: 36rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #ff3f2b;
+  margin-top: 30rpx;
+}
+.modal-goods .modal-goods-attr{
+  font-size: 30rpx;
+	font-weight: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+}
+.attr-types {
+  height: calc(807rpx - 434rpx);
+  border-bottom: 1px solid #e1e1e1;
+  padding: 30rpx 32rpx 0rpx;
+}
+.attr-types .item {
+  margin-bottom: 40rpx;
+}
+.attr-types .item .attr-name {
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+  margin-bottom: 12rpx;
+}
+.attr-types .item .types view {
+  display: inline-block;
+  padding: 20rpx;
+  border: 1px solid #333333;
+  border-radius: 6rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1rpx;
+	color: #333333;
+} 
+.details {
+  background: #f3f5fa;
+}
+.flow-title {
+  font-size: 24rpx;
+	letter-spacing: 4rpx;
+	color: #333333;
+  padding: 26rpx 0 30rpx 30rpx;
+  border-bottom: 1px solid #e8e8e8;
+}
+.flow-chart {
+  padding: 26rpx 77rpx 36rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.flow-chart text {
+  font-size: 18rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+}
+.flow-chart .line {
+  position: absolute;
+  height: 17rpx;
+  width: 510rpx;
+  background: #fa5a4c;
+  top: 60rpx;
+  left: 120rpx;
+}
+.flow-chart .box {
+  height: 86rpx;
+  width: 86rpx;
+  background: #fa5a4c;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+.flow-chart .box image {
+  margin: auto;
+}
+
+.orderImg {
+  height: 37rpx;
+  width: 35rpx;
+}
+.storeImg {
+  width: 41rpx;
+  height: 36rpx;
+} 
+.installImg {
+  width: 36rpx;
+  height: 37rpx;
+}
+.bdtop {
+  border-top: 1px solid #e8e8e8;
+}
+
+.appraise-item {
+  padding: 22rpx 30rpx 20rpx;
+  margin-bottom: 16rpx;
+}
+.person-info {
+  display: flex;
+}
+.person-info image{
+  width: 79rpx;
+  height: 79rpx;
+  border-radius: 50%;
+  background: #e1e1e1;
+}
+.info-name {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding-top: 11rpx;
+  padding-left: 16rpx;
+}
+.info-name view.info-left {
+  font-size: 26rpx;
+  color: #333;
+  letter-spacing: 3rpx;
+  margin-bottom: 5rpx;
+} 
+.info-name view.info-right {
+  font-size: 18rpx;
+  color: #666;
+  letter-spacing: 1rpx;
+} 
+
+.appraise-content {
+  font-size: 24rpx;
+	line-height: 35rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  margin-bottom: 14rpx;
+}
+.appraise-imgs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  margin: 10rpx 0;
+}
+.appraise-imgs image {
+  width: 224rpx;
+	height: 221rpx;
+	background-color: #cdcdcd;
+	border-radius: 10rpx;
+  margin-bottom: 8rpx;
+}
+.buy-time {
+  font-size: 18rpx;
+	letter-spacing: 1rpx;
+	color: #666666;
+  text-align: right;
+}

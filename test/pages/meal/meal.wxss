@@ -1,0 +1,5 @@
+/* pages/meal/meal.wxss */
+.meal{
+  width: 750rpx;
+  height: auto;
+}

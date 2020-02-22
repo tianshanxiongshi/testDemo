@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "套餐订单",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

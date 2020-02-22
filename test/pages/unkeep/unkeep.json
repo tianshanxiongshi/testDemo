@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "选择保养项目",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline",
+    "g-list": "/components/goods-list/goods-list"
+  }
+}

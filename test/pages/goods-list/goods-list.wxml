@@ -1,0 +1,51 @@
+<!--pages/goods-list/goods-liset.wxml-->
+<!-- 购买轮胎 -->
+<view class="goods_list">
+  <top-line></top-line>
+  <view class=" {{setText?'te_li':'on'}}">
+    <text>想要达到如下的效果，其实并不难，我的思路是，先使用一个div（先设置一个小于p高度的值，并使用overflow:hidden;,使p显示只有div设置高度以内的内容，当点击div时，变为和p一样的高度），在里面用一个p标记存放所有的文本内容，用一个i标记（上图1小箭头）用于第一次点击显示全部文本（使用hover，设置点击后，i标记的高度为0，就可以达到点击后影藏上图1小箭头的效果），于此同时，再在p标记中加一个i标记（上图2小箭头）用于第二次点击切换为显示部分文本，当你第二次点击时其实并不能切换到显示部分文本的效果，因为p标记中的i标记始终是属于div中的，因此，我们可以在div外再使用一个span标签（设置成和上图2小箭头一样的宽高），将其固定定位到上图2小箭头正上方，然后背景颜色设为透明（反正我是设了的，以免被相同的span标签影响），这样看起来就像是点击了小箭头后就可以切换两种状态一样。</text>
+    <text class="te_1" bindtap="setText" data-id="1">ai</text>
+  </view>
+  <view class="car_type">
+    <view class="type">
+      <text class="te_1" wx:if="{{carInfo}}">车型：<text>{{carInfo.carBrandName}}</text>
+      <text>{{carInfo.carSeriesName}}</text>
+      <text>{{carInfo.carModelName}}</text> </text>
+      <text class="te_1" wx:else>请选择车型</text>
+      <text class="iconfont icon-youjiantou youjiantou" bindtap="goMyCar"></text>
+    </view>
+  </view>
+  <view>
+    <view class="detail">
+      <view class="size">
+       
+      </view>
+      <view class="goods_detail">
+        <view class="goods_img">
+          <image src="../../images/card_bg.png"></image>
+        </view>
+        <view class="introduce">
+          <view class="goods_name">
+            <text>任E行雷达扫描监控 ALTIMAX GC 行车记录仪</text>
+          </view>
+          <view class="discount">
+            <text class="te_t1">秒杀</text>
+            <text class="te_t2">满399-30</text>
+          </view>
+          <view class="goods_price">
+            <text>已售1100件丨1522人评论</text>
+            <text class="te_price">¥519.00</text>
+          </view>
+          <view class="address">
+            <text >深圳奥羽4S店</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+     <view>
+     
+     </view>
+  </view>
+</view>

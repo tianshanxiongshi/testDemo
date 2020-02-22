@@ -1,0 +1,7 @@
+{
+ 
+  "navigationBarTitleText": "购买轮胎",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

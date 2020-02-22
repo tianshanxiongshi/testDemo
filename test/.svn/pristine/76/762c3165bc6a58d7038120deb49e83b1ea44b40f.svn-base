@@ -1,0 +1,39 @@
+<!--pages/deal-list/deal-list.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="relative">
+    <view class="title">
+      <view>时间</view>
+      <view>标题</view>
+      <view>流水号</view>
+      <view>收支</view>
+      <view bindtap='showTypeList'>{{ typeName }} <image class="down-arrow" src="../../images/down-arrow.png"></image> </view>
+    </view>
+    <view class="pull-down" hidden='{{ isShowType }}'>
+      <view bindtap='changeType' data-type='0'>余额</view>
+      <view bindtap='changeType' data-type='1'>积分</view>
+      <view bindtap='changeType' data-type='2'>成长值</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{ list }}" wx:key="index">
+      <view class="item-time">
+        <view>{{ item.createTimeY }}</view>
+        <view>{{ item.createTimeT }}</view>
+      </view>
+      <view class="center">{{ item.changeTitle }}</view>
+      <view class="center">{{ item.memberWalletListId }}</view>
+      <view class="center">{{ item.changeNum }}</view>
+      <view class="center">{{ item.thisValue }}</view>
+    </view>
+    <!-- <view class="item">
+      <view>2018-08-06 10:30</view>
+      <view>取消订单</view>
+      <view>166612321326</view>
+      <view>+800</view>
+      <view>18888</view>
+    </view> -->
+  </view>
+  <view class="bottom" wx:if="{{ isBottom }}">已经是最底部了</view>
+  <empty wx:if="{{ isEmpty }}"></empty>
+</view>

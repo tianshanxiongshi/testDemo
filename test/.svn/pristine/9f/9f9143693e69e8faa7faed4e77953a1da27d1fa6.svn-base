@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选取优惠券",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "填写爱车信息",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

@@ -1,0 +1,133 @@
+/* pages/goods-list/goods-liset.wxss */
+@import  "../../iconfont/iconfont.wxss";
+.goods_list{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.car_type{
+  width: 690rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  margin: 0 auto;
+}
+.car_type .type .te_1{
+  float: left;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.car_type .type .youjiantou{
+  float: right;
+  color: #6F6F6F;
+}
+.car_type .type .te_1 text{
+  margin-left: 28rpx;
+}
+.detail{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.detail .size{
+   width: 100%;
+   height: 16rpx;
+   background-color: #F3F5FA;
+}
+
+.goods_detail{
+  width: 690rpx;
+  height: auto;
+  overflow: hidden;
+  margin: 26rpx auto;
+  margin-bottom: 0;
+  border-bottom: 1rpx solid #E8E8E8;
+  padding-bottom: 26rpx;
+}
+.goods_detail .goods_img{
+  float: left;
+  width: 170rpx;
+  height: 170rpx;
+}
+.goods_detail .goods_img image{
+  width: 170rpx;
+  height: 170rpx;
+}
+.goods_detail .introduce{
+  float: right;
+   width: 498rpx;
+   height: auto;
+}
+.goods_detail .introduce .goods_name{
+  width: 100%;
+}
+.goods_detail .introduce .goods_name text{
+  display: block;
+  width: 100%;
+  line-height: 34rpx;
+  font-size: 24rpx;
+  color: #4E4E4E;
+}
+.goods_detail .introduce .discount{
+  width: 100%;
+  height: 34rpx;
+  margin:12rpx 0; 
+}
+
+.goods_detail .introduce .discount .te_t1 {
+  float: left;
+  width: 64rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  display: block;
+  border: 2rpx solid #FA695D;
+  border-radius: 8rpx;
+  font-size: 20rpx;
+  text-align: center;
+  color:#FA695D; 
+} 
+
+.goods_detail .introduce .discount .te_t2{
+  float: left;
+  width: 110rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  display: block;
+  border: 2rpx solid #C78C00;
+  border-radius: 8rpx;
+  font-size: 20rpx;
+  text-align: center;
+  margin-left: 18rpx;
+    color:#C78C00;
+} 
+.goods_detail .introduce .goods_price{
+  width: 100%;
+  height: auto;
+}
+.goods_detail .introduce .goods_price text{
+  float: left;
+  height: auto;
+  font-size: 20rpx;
+  color:#999999;
+  line-height: 24rpx;
+
+}
+.goods_detail .introduce .goods_price .te_price{
+  float: right;
+  color:#FA5A4C;
+}
+.goods_detail .introduce .address{
+  width: 100%;
+  height: 24rpx;
+
+  text-align: left;
+}
+.goods_detail .introduce .address text{
+  float: left;
+  width: 100%;
+  line-height: 30rpx;
+  font-size: 16rpx;
+  color: #999999;
+  text-align: left;
+}

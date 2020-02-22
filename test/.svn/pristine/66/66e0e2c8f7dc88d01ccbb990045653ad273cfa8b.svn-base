@@ -1,0 +1,9 @@
+<!--pages/quality-car/quality-car.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="car-type">
+    <text>车型：奥迪A6L 2018款 1.8T</text>
+    <image src="../../images/arrow-right.png"></image>
+  </view>
+  <g-list listInfo="{{ goodsList }}"></g-list>
+</view>

@@ -1,0 +1,185 @@
+/* pages/goods-detail2/goods-detail2.wxss */
+.goods-detail-two{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.goods_img{
+  width: 750rpx;
+  height: 400rpx;
+}
+.goods_img image{
+  width: 750rpx;
+  height: 400rpx;
+}
+.detail{
+  position: relative;
+  width: 690rpx;
+  height: 196rpx;
+  margin: 0 auto;
+}
+.detail .detail_img{
+  width: 196rpx;
+  height: 196rpx;
+  position: absolute;
+  top: -36rpx;
+  left: 0;
+}
+.detail .detail_img image{
+  width: 196rpx;
+  height: 196rpx;
+}
+.detail .Price{
+  float: right;
+  width: 450rpx;
+  height: auto;
+}
+.detail .Price .Price_t1 text{
+width: 100%;
+display: inline-block;
+ line-height: 46rpx;
+ font-size: 36rpx;
+ color: #FF3F2B;
+padding-top:36rpx;
+}
+.detail .Price .Price_t2{
+  width: 100%;
+  height: auto;
+}
+.detail .Price .Price_t2 text{
+display: inline-block;
+ line-height: 46rpx;
+ font-size: 30rpx;
+ color: #333333;
+ margin-left: 16rpx;
+}
+.detail .Price .Price_t2 .te_2{
+ margin-left: 0rpx;
+}
+.detail .Price .Price_t2 .te_1{
+ margin-left: 44rpx;
+}
+.specifications{
+  width: 690rpx;
+  margin: 0 auto;
+  height: auto;
+  border-top: 1rpx solid #E1E1E1;
+   border-bottom: 1rpx solid #E1E1E1;
+}
+.specifications .size{
+  width: 100%;
+  display: inline-block;
+  line-height: 52rpx;
+  margin-top: 10rpx;
+}
+.specifications .size text{
+  width: 100%;
+  font-size:24rpx;
+  color: #333333;
+  display: inline-block; 
+}
+.specifications .size .te_2{
+ width: 152rpx;
+ height: 54rpx;
+ border: 1rpx solid #FA5A4C;
+ text-align: center;
+ color: #FA5A4C;
+ border-radius: 8rpx;
+ margin-bottom: 34rpx;
+}
+.specifications .sp_color{
+ width: 100%;
+  display: inline-block;
+  line-height: 52rpx;
+  margin-top: 10rpx;
+}
+.specifications .sp_color .sp_color_l{
+  width: 100%;
+  font-size:24rpx;
+  color: #333333;
+  display: inline-block; 
+}
+.specifications .sp_color .sp_color_r{
+  width: 100%;
+  font-size:24rpx;
+  color: #333333;
+  display: inline-block; 
+}
+.specifications .sp_color .sp_color_r text{
+  width: 152rpx;
+ height: 54rpx;
+ display: inline-block;
+ border: 1rpx solid #FA5A4C;
+ text-align: center;
+ color: #FA5A4C;
+ border-radius: 8rpx;
+ margin-bottom: 34rpx;
+ margin-left: 16rpx;
+}
+.specifications .sp_color .sp_color_r .te_3{
+ border: 1rpx solid #333333;
+ color: #333333;
+}
+.buy_number{
+  width:690rpx;
+  height: 130rpx;
+  margin: 0 auto;
+}
+.buy_number .te_3{
+  line-height: 130rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.buy_number .number_right{
+  float: right;
+  line-height: 130rpx;
+  font-size: 24rpx;
+  color: #333333;
+  padding-top: 50rpx;
+}
+.buy_number .number_right .te_t1{
+ float: right;
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #D5D5D5;
+  font-size: 50rpx;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 4rpx;
+}
+.buy_number .number_right .te_t2{
+ float: right;
+  display: inline-block;
+  background-color: #F4F5FA;
+  height: 50rpx;
+  width: 90rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  text-align: center;
+}
+ .buy_number .number_right .te_t3{
+ float: right;
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 40rpx;
+  background-color: #D5D5D5;
+  font-size: 50rpx;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 4rpx;
+}
+.next{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #FA5A4C;
+  font-size: 30rpx;
+  color: #ffffff;
+  line-height: 100rpx;
+  text-align: center;
+}

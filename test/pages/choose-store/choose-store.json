@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择门店",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  }
+}

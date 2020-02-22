@@ -1,0 +1,51 @@
+<!--pages/choose-store/choose-store.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="nav">
+    <view class="nav-item">
+      <text>地址</text>
+      <view class="nav-flag">
+        <image src="../../images/down.png"></image>
+      </view>
+    </view>
+    <view class="nav-item">
+      <text>距离</text>
+      <view class="nav-flag">
+        <image src="../../images/down.png"></image>
+      </view>
+    </view>
+    <view class="nav-item">
+      <text>热门</text>
+      <view class="nav-flag">
+        <image src="../../images/up.png"></image>
+        <image src="../../images/down.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="store">
+    <view class="site">
+      <view>
+        <image class="location" src="../../images/location.png"></image>
+        <text>广东省深圳市宝安区西乡大道</text>
+      </view>
+      <view>
+        <image class="refresh" src="../../images/refresh.png"></image>
+      </view>
+    </view>
+    <view class="storeInfo">
+      <image class="storeImg" src=""></image>
+      <view class="store-item">
+        <view class="store-name">
+          <text>深圳市宝安区驰宝宝马5S店</text>
+          <text class="baseColor">5.0分</text>
+        </view>
+        <view class="store-site"><text>5.2km</text>广东省深圳市宝安区大铲湾佳鸿名车驰宝宝马5S店</view>
+        <view class="store-tel">
+          <image class="telephone" src="../../images/telephone.png"></image>
+          0755-26599626
+        </view>
+      </view>
+    </view>
+    <view class="cut-off-line"></view>
+  </view>
+</view>

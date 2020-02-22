@@ -1,0 +1,65 @@
+/* pages/add-car/add-car.wxss */
+@import '../generalize/generalize';
+.head-photo {
+  height: 320rpx;
+  width: 100%;
+  border-radius: 0;
+  margin:0;
+}
+.fill-data {
+  height: 53rpx;
+  line-height: 53rpx;
+  font-size: 20rpx;
+	letter-spacing: 3rpx;
+	color: #666666;
+  padding-left: 30rpx;
+  margin-bottom: 45rpx;
+  background: #f4f3f8;
+}
+.info-item {
+  position: relative;
+}
+.arrow-right {
+  position: absolute;
+  right: 110rpx;
+  height: 13rpx;
+  width: 25rpx;
+  transform: rotate(-90deg);
+}
+.down-arrow {
+  position: absolute;
+  height: 17rpx;
+  width: 9rpx;
+  right:24rpx;
+  top:50%;
+  transform:translateY(-50%) rotate(90deg);
+}
+.info-item picker {
+  font-size: 28rpx;
+}
+.info-item picker.province {
+  background-color:transparent!important;
+  padding-left: 0;
+  position: relative;
+  flex:4;
+}
+.new-plate {
+  font-size: 22rpx;
+	letter-spacing: 3rpx;
+	color: #666666;
+  margin-left: 10rpx;
+}
+.new-plate image {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-left: 2rpx;
+  margin-top: -4rpx;
+}
+.btn {
+  margin-top: 90rpx;
+}
+.car_license {
+  padding: 0 10rpx!important;
+  text-align: center;
+}

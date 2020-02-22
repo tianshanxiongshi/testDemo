@@ -1,0 +1,2 @@
+<!--pages/skip-page/skip-page.wxml-->
+<web-view src="{{ src }}"></web-view>

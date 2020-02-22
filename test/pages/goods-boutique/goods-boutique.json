@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "购买精品",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline"
+  },
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+  }

@@ -1,0 +1,54 @@
+/* pages/current-city/current-city.wxss */
+
+.refresh-city {
+  
+}
+.refresh-city view {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  padding: 0 30rpx;
+}
+.refresh-city view:last-child {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  background: #f3f5fa;
+}
+.refresh {
+  width: 25rpx;
+	height: 30rpx;
+  vertical-align: middle;
+  margin-top: -6rpx;
+  margin-right: 10rpx;
+}
+.hot-city {
+  padding: 22rpx 30rpx 10rpx;
+}
+.hot-city .title {
+  font-size: 18rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 3rpx;
+	color: #333333;
+  margin-bottom: 25rpx;
+}
+.hot-city .hotCitys {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot-city .hotCitys view{
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  border: 1px solid #cdcdcd;
+  padding: 25rpx 40rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 4rpx;
+	color: #333333;
+}

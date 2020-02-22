@@ -1,0 +1,255 @@
+<!--pages/index/index.wxml-->
+<view class="page">
+  <view class="head">
+    <view class="card">
+      <image class="card_bg" src="../../images/card_bg.png"></image>
+      <view class="ewm" bindtap='goTocurrentCity'>
+        {{ currentCity }}
+        <image class="ewm-img" src="../../images/white-arrow.png"></image>
+      </view>
+      <view class="card-no">
+        卡号：{{ memberId }}
+      </view>
+      <view class="head-img" bindtap="bindInformation">
+        <!-- <image src="../../images/success.png"></image> -->
+        <image src="{{ hasUserInfo.avatarUrl }}"></image>
+      </view>
+      <view class="name">
+        <text>{{ hasUserInfo.nickName }}</text>
+        <image class="level" src="../../images/grade_1.png"></image>
+      </view>
+      <view class="car-type" bindtap='goToMyCar'>
+        <view wx:if="{{ defaultCarInfo }}">
+          <!-- <image class="car-logo" src="../../images/person.png"></image> -->
+          <text>{{ defaultCarInfo.carBrandName }}</text>
+          <text>{{ defaultCarInfo.carSeriesName }}</text>
+          <text>{{ defaultCarInfo.carModelName }}</text>
+        </view>
+        <view wx:else>
+          <text>请选择车型</text>
+        </view>
+        <image class="white-arrow" src="../../images/white-arrow.png"></image>
+      </view>
+      <view class="progress-bar">
+        <view class="bar" style="width:{{ width }}rpx"></view>
+      </view>
+      <view class="vard-score">
+        <view class="grade">
+          <view>0</view>
+          <view>普</view>
+        </view>
+        <view class="grade">
+          <view>1000</view>
+          <view>银</view>
+        </view>
+        <view class="grade">
+          <view>3000</view>
+          <view>金</view>
+        </view>
+        <view class="grade">
+          <view>10000</view>
+          <view>钻</view>
+        </view>
+      </view>
+      <view class="upgrade-tips">
+        还差{{ nextValue }}分成长值升级至{{ nextMemberLevel }}会员
+      </view>
+    </view>
+    <view class="user-info">
+      <view class="info-item" bindtap='goToCouponList'>
+        <view>{{ couponNum + giftNum }}</view>
+        <view>套餐</view>
+      </view>
+      <view class="info-item" bindtap='goToCouponList'>
+        <view>{{ couponNum + giftNum }}</view>
+        <view>优惠券</view>
+      </view>
+      <view class="info-item">
+        <view>{{ integral }}</view>
+        <view bindtap='integralExplain'>积分 <image bindtap='integralExplain' class="warn" src="../../images/warn.png"></image></view>
+      </view>
+      <view class="info-item">
+        <view>{{ memberValue }}</view>
+        <view bindtap='growthExplain'>成长值 <image bindtap='growthExplain' class="warn" src="../../images/warn.png"></image></view>
+      </view>
+      <view class="info-item" bindtap='goToDealList'>
+        <view>{{ memberMoney }}</view>
+        <view>可用余额</view>
+      </view>
+    </view>
+    <view class="pay-modal">
+      <view class="line"></view>
+      <view class="pay-btn" bindtap='goToRecharge'><image class="recharge-img" src="../../images/recharge.png"></image> 点击充值</view>
+      <view class="pay-btn" bindtap='toPay'><image class="pay-code-img" src="../../images/pay-code.png"></image> 点击支付</view>
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="server-modal">
+    <view class="server-item" wx:for="{{ configList }}" wx:key="index">
+      <view class="server-type {{ index == 0 ? 'bd-radius-lt' : index == 2 ? 'bd-radius-lb server-color-3' : 'server-color-1'}}" bindtap='getConfigInfo' data-item = "{{ item }}" >
+        <image src="../../images/tire.png"></image>
+        <!-- <image src="../../images/upkeep.png"></image> -->
+        <!-- <image src="../../images/Boutique.png"></image> -->
+        <view>{{ item.menuTitle }}</view>
+        <view>{{ item.menuTitleSub }}</view>
+      </view>
+      <view class="server-content onlygoods {{ index == 0 ? '' : index == 2 ? 'server-color-4' : 'server-color-2'}}" wx:if="{{item.child.length == 1}}">
+        <view class="{{ index == 0 ? 'bd-radius-rt' : index == 2 ? 'bd-radius-rb' : '' }}" bindtap='getConfigInfo' data-item = "{{ item.child[0] }}">{{ item.child[0].menuTitle }}</view>
+      </view>
+      <view class="server-content towGoods {{ index == 0 ? '' : index == 2 ? 'server-color-4' : 'server-color-2'}}" wx:if="{{item.child.length == 2}}">
+        <view bindtap='getConfigInfo' data-item = "{{ item.child[0] }}" class="{{ index == 0 ? 'bd-radius-rt' : '' }}">{{ item.child[0].menuTitle }}</view>
+        <view bindtap='getConfigInfo' data-item = "{{ item.child[1] }}" class="{{ index == 2 ? 'bd-radius-rb' : '' }}">{{ item.child[1].menuTitle }}</view>
+      </view>
+      <block wx:if="{{item.child.length == 4}}">
+        <view class="server-content {{ index == 0 ? '' : index == 2 ? 'server-color-4' : 'server-color-2'}}">
+          <view bindtap='getConfigInfo' data-item = "{{ item.child[0] }}">{{ item.child[0].menuTitle }}</view>
+          <view bindtap='getConfigInfo' data-item = "{{ item.child[1] }}">{{ item.child[1].menuTitle }}</view>
+        </view>
+        <view class="server-content {{ index == 0 ? '' : index == 2 ? 'server-color-4' : 'server-color-2'}}">
+          <view bindtap='getConfigInfo' data-item = "{{ item.child[2] }}" class="{{ index == 0 ? 'bd-radius-rt' : '' }}">{{ item.child[2].menuTitle }}</view>
+          <view bindtap='getConfigInfo' data-item = "{{ item.child[3] }}" class="{{ index == 2 ? 'bd-radius-rb' : '' }}">{{ item.child[3].menuTitle }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="server-modal active-modal">
+    <view class="active-container">
+      <view class="title"><image src="../../images/active-log.png"></image> 会员活动</view>
+      <block wx:if="{{ activeList.length }}">
+        <view class="img-item" wx:for="{{ activeList }}" wx:key="index" data-src="{{ item.shopActivityIndexUrl }}" bindtap="goToOutside">
+          <image src="{{ item.shopActivityTabImgUrl }}"></image>
+        </view>
+      </block>
+      <view class="img-item" bindtap='waitting' wx:else>
+        <image src="../../images/active-default-img.jpg"></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='cover' wx:if="{{ !hasUserInfo }}" style="z-index:10;">
+    <view class="box">
+      <view class='tips'>申请获取以下权限</view>
+      <view>获得你的公开信息（昵称、头像等）</view>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </view>
+  </view>
+  <view class="cover" wx:if="{{ !indexLoad }}"></view>
+
+  <view class="my">
+    <view class="my-top">
+      <image src="../../images/my.png"></image>
+      我的
+    </view>
+    <view class="my-content">
+      <view class="content-item" bindtap='goToPersonalInfo'>
+        <image src="../../images/tg-code.png"></image>
+        推广码
+      </view>
+      <view class="content-item" bindtap='goTogeneralize'>
+        <image src="../../images/personage-info.png"></image>
+        个人信息
+      </view>
+      <view class="content-item" bindtap='goToMyCar'>
+        <image src="../../images/award.png"></image>
+        车库
+      </view>
+      <view class="content-item">
+        <image src="../../images/order.png"></image>
+        订单
+      </view>
+    </view>
+  </view>
+  <view class="appraise">
+    <view class="my-top">
+      <image class="appraise-img" src="../../images/appraise.png"></image>
+      会员评价
+    </view>
+    <view class="appraise-item">
+      <view class="person-info">
+        <image src=""></image>
+        <view class="info-name">
+          <view>东里亚</view>
+          <view>2018-09-13 12:30</view>
+        </view>
+      </view>
+      <view class="car-info">
+        <text>车型：</text>
+        <text>宝马525li</text>
+        <text class="cost">花费：2500</text>
+        <text class="spare">（ 省1200 ）</text>
+      </view>
+      <view class="appraise-content">
+        初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养，初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养，初次在尊鸿荟预约做保养。
+      </view>
+      <view class="appraise-imgs">
+        <image src=""></image>
+        <image src=""></image>
+        <image src=""></image>
+        <image src=""></image>
+      </view>
+      <view class="address">
+        <image src="../../images/location.png"></image>
+        深圳宝马5S店
+      </view>
+    </view>
+  </view>
+  <base-modal id="modal">
+    <view slot="dialog" class="modal-view">
+      <view class="modal-title">{{ modalTitle }}</view>
+      <view class="modal-content" wx:if="{{ showModalType == 1 }}">
+        <view class="modal-item">
+          <view>积分获取规则：</view>
+          <view>① 用户通过消费、推荐充值等获得相应的积分；</view>
+          <view>② 消费每10元获得1积分，推荐充值成功每30元同样获得1积分；</view>
+          <view>③ 积分根据会员等级享受积分累计倍数增长。</view>
+        </view>
+        <view class="modal-item">
+          <view class="table-td table-title">会员等级和对应的倍数</view>
+          <view class="table-td table-th">
+            <text>会员等级</text>
+            <text>普卡</text>
+            <text>银卡</text>
+            <text>金卡</text>
+            <text>钻卡</text>
+          </view>
+          <view class="table-td">
+            <text>积分奖励倍数</text>
+            <text>1倍</text>
+            <text>1.1倍</text>
+            <text>1.3倍</text>
+            <text>1.5倍</text>
+          </view>
+          <!-- <view class="table-td">
+            <text>生日当月积分奖励</text>
+            <text>2倍</text>
+            <text>2倍</text>
+            <text>3倍</text>
+            <text>3倍</text>
+          </view> -->
+        </view>
+        <view class="modal-item">
+          <view>积分使用规则：</view>
+          <view>① 积分可抵扣用户的消费金额，每10积分抵1元，最高可抵金额的50%；</view>
+          <view>② 消费金额不得小于100元；</view>
+          <view>③ 积分支付的积分额必须是10的整数倍。</view>
+        </view>
+        <view class="modal-item">
+          <view>积分有效期：</view>
+          <view>每笔积分有效期为自获取之日起12个月，积分过期前一个月将通过短信通知会员，积分过期后将不得使用。</view> 
+        </view>
+      </view>
+      <view class="modal-content" wx:else>
+        <view class="modal-item">
+          <view>① 用户通过消费获得相应的成长值；</view>
+          <view>② 成长值级别的范围；</view>
+          <view>普卡	0 到 999</view>
+          <view>银卡	1000 到 2999</view>
+          <view>金卡	3000 到 9999</view>
+          <view>钻卡	10000 以上</view>
+          <view>③ 每消费10元获得1成长值。</view>
+        </view>
+      </view>
+    </view>
+  </base-modal>
+</view>

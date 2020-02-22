@@ -1,0 +1,139 @@
+<!--pages/goods-detail/goods-detail.wxml-->
+<!-- 商品详情 -->
+<view class="goods_detail">
+  <!-- banner -->
+  <view class="banner">
+    <swiper indicator-dots="{{false}}" autoplay="{{true}}" interval="{{2000}}" duration="{{500}}" class="swiper"  bindchange="eventhandle">
+      <block wx:for="{{imgUrls}}" wx:for-item="{{item}}">
+        <swiper-item>
+          <image src='../../images/card_bg.png' class="image_1"></image>
+        </swiper-item>
+      </block>
+      
+    </swiper>
+    <text  class="lunbo">{{currentImg}}/{{imgUrls.length}}</text>
+  </view>
+ 
+  <!-- 详情 -->
+  <view class="detail">
+    <view class="Tips">
+      <text>此轮胎与您的车型不匹配，建议重新选择</text>
+    </view>
+    <view class="price">
+      <view class="price_type">
+        <view class="vi_1">¥299</view>
+        <view class="vi_2">¥599</view>
+        <view class="vi_3">买三送一</view>
+        <view class="vi_4">满599-50</view>
+        <view class="vi_5">
+          <text class="te_1"></text>
+        </view>
+        <view class="clear_float"></view>
+      </view>
+      <view class="goods_name">
+        <text>【美国进口】美国将军轮胎 ALTIMAX GC5</text>
+      </view>
+      <view class="introduce">
+        <text>高端舒适车首选</text>
+      </view>
+    </view>
+  </view>
+  <view class="line_1"></view>
+  <view class="number">
+    <view class="number_left">
+      <text>购买数量</text>
+    </view>
+    <view class="number_right">
+      <text class="te_t3"  bindtap="addNum">+</text>
+      <text class="te_t2">{{addNumber}}</text>
+      <text class="te_t1"  bindtap="reduceNum">-</text>
+    </view>
+  </view>
+  <view class="empty"></view>
+  <view class="commodity">
+    <view bindtap="bindType" data-index="1">
+      <text class="{{num==1?'set_color':''}}">商品</text>
+      <text class="{{num==1?'line_2':''}}"></text>
+    </view>
+    <view bindtap="bindType" data-index="2">
+      <text class="{{num==2?'set_color':''}}">评价122</text>
+      <text class="{{num==2?'line_2':''}}"></text>
+    </view>
+    <view bindtap="bindType" data-index="3">
+      <text class="{{num==3?'set_color':''}}">规格</text>
+      <text class="{{num==3?'line_2':''}}"></text>
+    </view>
+    <view bindtap="bindType" data-index="4">
+      <text class="{{num==4?'set_color':''}}">详情</text>
+      <text class="{{num==4?'line_2':''}}"></text>
+    </view>
+  </view>
+  <scroll-view scroll-y style="height:800rpx" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-top="{{currentScroll}}">
+
+
+
+    <view class="scroll_type" wx:for="{{numberb}}">
+      <view class="maintain">
+        <view class="title">
+          <text>保养流程</text>
+        </view>
+        <view class="process">
+          <view class="process_line"></view>
+          <view class="process_type">
+            <view class="type_1">
+              <text class="iconfont icon-xiangmuguanli icon_color"></text>
+              <text>在线选项目</text>
+            </view>
+            <view class="type_2">
+              <text class="iconfont icon-mendian icon_color"></text>
+              <text>在线选项目</text>
+            </view>
+            <view class="type_2">
+              <text class="iconfont icon-banshou icon_color"></text>
+              <text>在线选项目</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="evaluate">
+        <text>全部评价</text>
+      </view>
+      <view class="evaluate_list">
+        <view class="portrait">
+          <image src='../../images/card_bg.png'></image>
+        </view>
+        <view class="detail" wx:if="{{true}}">
+          <view class="v_1">
+            <text>小明</text>
+            <text class="te_time">2018-07-28</text>
+          </view>
+          <view class="v_2">
+            <text></text>
+            <text></text>
+            <text></text>
+            <text></text>
+            <text></text>
+          </view>
+          <view class="v_3">
+            <text>感觉还不错，挺耐用的</text>
+          </view>
+          <view class="v_4">
+            <image src="../../images/card_bg.png"></image>
+          </view>
+          <view class="v_5">
+            <text>购买时间：2018-07-28</text>
+          </view>
+
+        </view>
+        <view class="full_evaluate" bindtap="goToEvaluate">查看全部评价</view>
+        
+      </view>
+
+
+
+
+    </view>
+  </scroll-view>
+  <view class="next" bindtap="goToGoodsDetailTwo">下一步</view>
+  <view class="kong"></view>
+</view>

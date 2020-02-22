@@ -1,0 +1,7 @@
+<!--pages/test/test.wxml-->
+<view  hidden="{{ !modalShow }}" animation="{{animationData}}" calss="modal">
+  <view class="modal-mask" bindtap='hideModal'></view>
+  <view class="body">
+    <slot name="dialog"></slot>
+  </view>
+</view>

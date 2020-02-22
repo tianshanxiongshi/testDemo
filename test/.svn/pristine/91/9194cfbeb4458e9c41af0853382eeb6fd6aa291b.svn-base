@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline",
+    "empty-modal": "/components/Empty/empty",
+    "statistics-modal": "/components/statistics/statistics"
+  }
+}

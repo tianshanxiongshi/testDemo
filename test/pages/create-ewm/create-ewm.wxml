@@ -1,0 +1,51 @@
+<!--pages/create-ewm/create-ewm.wxml-->
+<view class="page">
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="slogan">
+    <image src="../../images/timg.png"></image>
+    <text>协心，创造佳鸿美好明天</text>
+  </view>
+  <view class="tg-info">
+    <form bindsubmit="formSubmit">
+      <view class="info-item">
+        <text>所在门店：</text>
+        <picker bindchange="bindPickerChange" name="shop" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <view class="info-item">
+        <text>所在部门：</text>
+        <picker bindchange="bindPickerChange2" name="department" value="{{index2}}" range-key="name" range="{{objArray}}">
+          <view class="picker">
+            {{objArray[index2].name}}
+          </view>
+        </picker>
+      </view>
+      <view class="info-item">
+        <text>职位：</text>
+        <input type="text" name="position" placeholder="单行输入" placeholder-class="holder"></input>
+      </view>
+      <view class="info-item">
+        <text>姓名：</text>
+        <input type="text" name="name" placeholder="单行输入" placeholder-class="holder"></input>
+      </view>
+      <view class="info-item">
+        <text>手机号：</text>
+        <input type="number" name="phone" placeholder="单行输入" placeholder-class="holder"></input>
+      </view>
+      <view class="btn">
+        <text class="tips">请输入真实姓名</text>
+        <button hover-class="button-hover" formType="submit">保存</button>
+      </view>
+    </form>
+  </view>
+</view>

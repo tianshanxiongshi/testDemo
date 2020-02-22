@@ -1,0 +1,29 @@
+/* pages/choose-coupon/choose-coupon.wxss */
+@import "../coupon/coupon.wxss";
+.content {
+  padding-top: 1rpx;
+}
+.toUseCoupon {
+  height: 156rpx;
+  width: 100rpx;
+  padding-top: 46rpx;
+  box-sizing: border-box;
+}
+.toUseCoupon view {
+  font-size: 21rpx;
+	letter-spacing: 1rpx;
+	color: #915a00;
+  text-align: center;
+}
+.arrow {
+  /* width: 18rpx;
+  height: 10rpx; */
+  width: 35rpx;
+  height: 35rpx;
+}
+.emptyTip {
+  font-size:36rpx;
+  text-align:center;
+  color:#666;
+  margin-top:300rpx;
+}

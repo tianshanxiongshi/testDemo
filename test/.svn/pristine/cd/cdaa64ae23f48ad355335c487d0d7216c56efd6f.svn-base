@@ -1,0 +1,2 @@
+/* pages/pay-pwd/pay-pwd.wxss */
+@import '../register/register.wxss';

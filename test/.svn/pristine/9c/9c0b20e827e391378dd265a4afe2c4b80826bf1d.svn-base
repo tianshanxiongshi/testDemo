@@ -1,0 +1,9 @@
+<!--pages/award/award.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="head">
+    <view>2301</view>
+    <view>获得积分</view>
+  </view>
+  <statistics-modal></statistics-modal>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/member-card/member-card.wxml-->
+<view class="page">
+   <canvas canvas-id="barcode" class="barcode"/> 
+   <view class="cardNo">2018 0126 6595 8</view>
+   <view class="tips">结账时请主动出示会员卡</view> 
+</view>

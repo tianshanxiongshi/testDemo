@@ -1,0 +1,157 @@
+<!--pages/goodsInfo/goodsInfo.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <scroll-view scroll-y bindscroll="scroll" style="height:{{ scrollHeight }}" scroll-into-view="{{toView}}">
+    <view class="lb">
+      <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}" bindchange="move">
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="dots">{{current + 1}}/{{length}}</view>
+    </view>
+    <view class="middle">
+      <view class="goods">
+        <view class="tips">
+          <image src="../../images/warn.png"></image>不合适
+        </view>
+        <view class="price">
+          <view class="new">￥288</view>
+          <view class="old">￥555</view>
+          <!-- <view>买三送一</view>
+          <view>满599-50</view> -->
+          <view class="activity">
+            <text class="{{ item.type == 1 ? 'seckill' : '' }}" wx:for="{{ activity }}" wx:item="item" wx:key="index">{{ item.name }}</text>
+          </view>
+        </view>
+        <view class="title">我是商品标题我是商品标题我是商品标题我是商品标题我是商品标题标题我是商品标题</view>
+        <view class="explain">我是商品说明</view>
+      </view>
+    </view>
+    <view class="buy-box">
+      <view>购买数量</view>
+      <view class="count">
+        <view>-</view>
+        <view class="num">2</view>
+        <view>+</view>
+      </view>
+    </view>
+    <view class="line"></view>
+    <view class="content" id="nav">
+      <view class="nav">
+        <view class="active">商品</view>
+        <view>评价（122）</view>
+        <view>规格</view>
+        <view>详情</view>
+      </view>
+      <view class="details" style="height:600px;">
+        <view class="goodsItem">
+          <view class="flow">
+            <view class="flow-title">保养流程</view>
+            <view class="flow-chart">
+              <view class="line"></view>
+              <view class="left">
+                <view class="box">
+                  <image class="orderImg" src="../../images/order-icon.png"></image>
+                </view>
+                <text>在线选项目</text>
+              </view>
+              <view class="middle_">
+                <view class="box">
+                  <image class="storeImg" src="../../images/arrive-store.png"></image>
+                </view>
+                <text>下单选门店</text>
+              </view>
+              <view class="right">
+                <view class="box">
+                  <image class="installImg" src="../../images/install.png"></image>
+                </view>
+                <text>到店享安装</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="evaluationItem">
+          <view class="flow-title bdtop">全部评价</view>
+          <view class="appraise-item">
+            <view class="person-info">
+              <image src=""></image>
+              <view class="info-name">
+                <view class="info-left">
+                  <view>东里亚</view>
+                  <i-rate
+                    value="5"
+                    size="16">
+                  </i-rate>
+                </view>
+                <view class="info-right">2018-09-13 12:30</view>
+              </view>
+            </view>
+            <view class="appraise-content">
+              初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养，初次在尊鸿荟预约做保养初次在尊鸿荟预约做保养，初次在尊鸿荟预约做保养。
+            </view>
+            <view class="appraise-imgs">
+              <image src=""></image>
+              <image src=""></image>
+              <image src=""></image>
+              <image src=""></image>
+            </view>
+            <view class="buy-time">
+              购买时间：2018-07-28
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="step" bindtap="handleOpen">下一页</view>
+  <view class="modal" catchtouchmove>
+    <i-action-sheet visible="{{ visible }}" bind:cancel="handleCancel">
+      <view slot="body" class="attrBox">
+        <view class="attrTop">
+          <image src=""></image>
+          <view class="modal-goods">
+            <view class="modal-goods-price">￥287.00</view>
+            <view class="modal-goods-attr">已选：17寸，黑色，1件</view>
+          </view>
+        </view>
+        <scroll-view scroll-y class="attr-types" catchtouchmove>
+          <view class="item">
+            <view class="attr-name">尺寸</view>
+            <view class="types">
+              <view>typeone</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+            </view>
+          </view>
+          <view class="item">
+            <view class="attr-name">尺寸</view>
+            <view class="types">
+              <view>typeone</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+              <view>typetwo</view>
+            </view>
+          </view>
+        </scroll-view>
+        <view class="buy-box">
+          <view>购买数量</view>
+          <view class="count">
+            <view>-</view>
+            <view class="num">2</view>
+            <view>+</view>
+          </view>
+        </view>
+        <view class="step zIndex1" bindtap="next">下一页</view>
+      </view>
+    </i-action-sheet>
+  </view>
+  
+</view>

@@ -1,0 +1,57 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="top">优惠充值：</view>
+  <view class="count">
+    <view class="recharge-money money">
+      <view>{{ rechargeNum }}</view>
+      <view>充值</view>
+    </view>
+    <view>+</view>
+    <view class="send-money money">
+      <view>{{ giveNum }}</view>
+      <view>赠送</view>
+    </view>
+    <view>=</view>
+    <view class="total-money money">
+      <view>{{ totalNum }}</view>
+      <view>到账</view>
+    </view>
+  </view>
+  <view class="recharge-modal">
+    <view class="explain">
+      充{{ rechargeNum }}送{{ giveNum }}，多充多送
+    </view>
+    <view class="select">
+      <view wx:for="{{ list }}" wx:key="index" data-id="{{ item.rechargeId }}"  data-rechargeNum="{{ item.rechargenum }}" data-giveNum="{{ item.givenum }}" class="{{ chooseId == item.rechargeId ? 'choose' : '' }}" bindtap='chooseNum'>{{ item.rechargenum}}元</view>
+      <!-- <view>2000元</view>
+      <view>5000元</view>
+      <view>10000元</view>
+      <view>20000元</view>
+      <view>30000元</view>
+      <view class="choose">50000元</view> -->
+    </view>
+    <view class="explain" wx:if="{{ !chooseId }}">请选择充值金额</view>
+    <view class="explain" wx:else></view>
+    <view class="confirm">
+      <view class="confirm-explain">
+        <text>点击确定充值，即表示您已阅读并同意</text>
+        <navigator url="/pages/agreement/agreement">《充值协议》</navigator>
+      </view>
+      <button class="{{ isSubmit ? 'isRefer' : '' }}" plain bindtap='pay'>确定充值</button>
+    </view>
+  </view>
+  <view class="tips">
+    <view>温馨提示：</view>
+    <view>1. 用户操作充值不收取任何手续费，充值方式为微信充值；</view>
+    <view>2. 用户每笔充值，金额可享一定优惠；</view>
+    <view>3. 充值金额将在半个小时内到账，在我的可用余额中展示。</view>
+  </view>
+  <view class='cover' wx:if="{{ !hasUserInfo }}" style="z-index:10;">
+    <view class="box">
+      <view class='tips'>申请获取以下权限</view>
+      <view>获得你的公开信息（昵称、头像等）</view>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    </view>
+  </view>
+</view>

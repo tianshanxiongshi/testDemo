@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "汽车精品",
+  "usingComponents": {
+    "g-list": "/components/goods-list/goods-list",
+    "top-line": "/components/tpline/tpline"
+  }
+}

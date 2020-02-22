@@ -1,0 +1,51 @@
+<!--pages/add-car/add-car.wxml-->
+<view class="page">
+  <top-line></top-line>
+  <view class="head-photo">
+    <image src="../../images/add-car-img.png"></image>
+  </view>
+  <view class="fill-data">请完善以下资料</view>
+  <view class="tg-info">
+    <form bindsubmit="formSubmit">
+      <view class="info-item">
+        <text>车型：</text>
+        <input type="text" placeholder="请添加您的爱车" placeholder-class="holder" disabled bindtap='goToChooseCar' value='{{ series_car }}' style="padding-right:55rpx;"></input>
+        <image class="arrow-right" src="../../images/down-arrow.png"></image>
+      </view>
+      <view class="info-item">
+        <text>车牌号：</text>
+        <picker class="province" bindchange="bindPickerChange" value="{{index}}" range-key="dicValue" range="{{array}}">
+          <view class="picker">
+            {{array[index].dicValue}}
+          </view>
+          <image class="down-arrow" src="../../images/arrow-right.png"></image>
+        </picker>
+        <input class="car_license" type="text" placeholder="车牌号" placeholder-class="holder" maxlength='8' bindblur='upperCase' value="{{sendData.member_car_license}}"></input>
+        <view class="new-plate" bindtap='useNewPlate'>新能源车牌 <image src="{{ chooseImg }}"></image></view>
+      </view>
+      <view class="info-item">
+        <text>车架号：</text>
+        <input type="number" placeholder="（选填）" name="car_frame_num"  placeholder-class="holder" bindinput='inputCarFrameNum' value="{{ sendData.car_frame_num }}" ></input>
+      </view>
+      <view class="info-item">
+        <text>购车时间：</text>
+        <picker mode="date" value="{{date}}" start="2000-01-01" end="{{ endTime }}" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+          <!-- <image class="arrow-right" src="../../images/down-arrow.png"></image> -->
+        </picker>
+      </view>
+      <view class="info-item">
+        <text>行驶里程：</text>
+        <input type="number" name="car_mileage" placeholder="公里数(km)" placeholder-class="holder" bindinput='inputCarMileage' value="{{ sendData.car_mileage }}"></input>
+      </view>
+      <view class="btn">
+        <text class="tips" wx:if="{{ errMsg }}">{{ errMsg }}</text>
+        <button hover-class="button-hover" formType="submit" loading="{{ isSubmit }}">保存</button>
+      </view>
+    </form>
+  </view>
+</view>
+
+

@@ -1,0 +1,80 @@
+/**impower.wxss**/
+page,.page,.car-box {
+  height: 100%;
+}
+.demo-container{
+	width:80vw;
+	height: 100vh;
+	background:#fff;
+}
+.car-box {
+  display: flex;
+  width: 100%;
+}
+.baseColor {
+  color: #fa5a4c!important;
+}
+.center {
+  text-align: center;
+}
+.bdl {
+  border-left: 1px solid #dadada;
+}
+.car-brand {
+  width: 220rpx;
+}
+.car-model {
+  flex:1;
+}
+.scrollBox {
+  width: 100%;
+  height: calc(100% - 80rpx);
+}
+.scroll-left {
+  border-right: 1px solid #dadada;
+}
+.title {
+  text-align: center;
+  font-size: 32rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  font-weight: 600;
+  border-bottom: 1px solid #dadada;
+}
+.scrollBox view {
+  border-bottom: 1px solid #dadada;
+  padding: 15rpx 0;
+}
+.scroll-left view {
+  text-align: center;
+  font-size: 30rpx;
+  word-break: break-all;
+  padding: 20rpx 10px;
+}
+.scroll-left view image {
+  height: 100rpx;
+  width: 100rpx;
+  display: block;
+  margin: auto;
+  margin-bottom: 6rpx;
+}
+.scroll-right view {
+  padding-left: 30rpx;
+  font-size: 28rpx;
+  color:#323232;
+
+}
+
+.series-title {
+  text-align: center;
+  font-size: 30rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.series-item {
+  font-size: 28rpx;
+  color: #323232;
+  padding-left: 30rpx;
+  border-bottom: 1px solid #dadada;
+  line-height:80rpx;
+}

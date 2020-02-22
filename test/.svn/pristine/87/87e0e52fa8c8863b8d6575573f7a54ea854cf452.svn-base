@@ -1,0 +1,6 @@
+<!--components/goods-list/goods-list.wxml-->
+<view class="goods-list">
+  <view wx:for="{{ listInfo }}" wx:item="item" wx:key="index" class="gItem">
+    <g-item class="my-class" goodsInfo="{{ item }}" ></g-item>
+  </view>
+</view>

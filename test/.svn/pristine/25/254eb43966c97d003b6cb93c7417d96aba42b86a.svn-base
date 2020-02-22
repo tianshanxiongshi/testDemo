@@ -1,0 +1,321 @@
+/* pages/order/order.wxss */
+@import '../../iconfont/iconfont.wxss';
+input{
+  min-height: 0;
+  line-height: 26rpx;
+}
+.order{
+  width: 750rpx;
+  height: auto;
+}
+.order_merberInfo{
+  width: 750rpx;
+  height: auto;
+}
+.merber_name{
+  width: 750rpx;
+  height:0 auto; 
+  overflow: hidden;
+}
+.merber_name .merber_n{
+  margin-left: 30rpx;
+  width: 690rpx;
+   height:0 auto;
+}
+.merber_name .merber_n .name{
+  float: left;
+  height:78rpx;
+  margin: 0 auto; 
+}.merber_name .merber_n .name .icon_t{
+ font-size: 35rpx;
+ color: #FA5A4C;
+ text-align: center;
+ line-height: 70rpx;
+ margin: 0rpx 12rpx 0 0;
+}
+.merber_name .merber_n .name text{
+ line-height: 78rpx;
+ font-size: 24rpx;
+ color: #333333;
+
+}
+.merber_name .merber_n .phone{
+  float: right;
+  height: 78rpx;
+}
+.merber_name .merber_n .phone text{
+  line-height: 78rpx;
+ font-size: 24rpx;
+ color: #333333;
+
+}
+.store{
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+  border-top: 1rpx solid #E8E8E8;
+  border-bottom: 1rpx solid #E8E8E8;
+}
+.store .store_d{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 78rpx;
+}
+.store .store_d text{
+  line-height: 78rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.time{
+   width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+.time .time_c{
+  width: 690rpx;
+  margin: 0 auto;
+  height: 78rpx;
+}
+.time .time_c text{
+  line-height: 78rpx;
+  font-size: 24rpx;
+  color: #333333;
+  margin-right: 16rpx;
+}
+.time .time_c .ico_1{
+  float: right;
+  margin: 0;
+}
+.blank{
+  width: 100%;
+  height: 16rpx;
+  background-color: #F3F5FA;
+}
+.order_list{
+  width: 750rpx;
+  height: auto;
+}
+.order_img{
+ width: 750rpx;
+  height: auto;
+  padding-top: 30rpx;
+  border-bottom: 1rpx solid #E8E8E8;
+}
+.order_img .order_i {
+  float: left;
+  width: 690rpx;
+   margin-left: 30rpx;
+  height: auto;
+
+}
+.order_img .order_i image{
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 8rpx;
+  margin-right: 36rpx;
+}
+.statistics{
+   width: 690rpx;
+   height: auto;
+   margin-left: 30rpx;
+}
+.statistics text{
+  display: block;
+  width: 100%;
+  line-height: 76rpx;
+  font-size: 20rpx;
+  color: #666666;
+}
+.activity{
+  width: 690rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.activity .activity_discount{
+  width: 100%;
+  height: 68rpx;
+  margin-top: 28rpx;
+}
+.activity .activity_discount text{
+  line-height: 68rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.activity .Coupon{
+  width: 100%;
+  height: 88rpx;
+}
+.activity .Coupon text{
+  line-height: 68rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.activity .Coupon .te_t1{
+  display: inline-block;
+  float: right;
+  color: #FA5A4C;
+}
+.activity .activity_discount .te_t1{
+  display: inline-block;
+  float: right;
+  color: #FA5A4C;
+}
+.payment{
+  width: 750rpx;
+  height: auto;
+}
+.contain{
+  width: 750rpx;
+  height: auto;
+   border-bottom: 1rpx solid #DDDDDD;
+}
+.total .contain .pay_total{
+  width: 690rpx;
+  margin-left: 30rpx;
+  height: auto;
+  
+}
+.total{
+  width: 690rpx;
+  height: auto;
+}
+.total .contain .pay_total text{
+  line-height: 104rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.total .contain .pay_total .te_t1{
+    display: inline-block;
+  float: right;
+  color: #FA5A4C;
+}
+.total .service_list{
+  width: 750rpx;
+  height: auto;
+  background-color: #F3F5FA;
+  border-bottom: 1rpx solid #DDDDDD;
+
+}
+.total .service_list .service_item{
+  width: 690rpx;
+  height: auto;
+  margin: 0 auto;
+}
+
+ .total .service_list .service_item text{
+   line-height: 104rpx;
+  font-size: 24rpx;
+  color: #333333;
+
+}
+.total .service_list .service_item .te_t1{
+    display: inline-block;
+  float: right;
+  color: #FA5A4C;
+
+}
+.integral{
+  width: 690rpx;
+  height: auto;
+  margin: 0 auto;
+}
+.integral .v_1{
+  float: left;
+  line-height: 110rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.integral .v_1 text{
+ line-height: 110rpx;
+  font-size: 24rpx;
+  color: #333333;
+}
+.integral .v_2{
+  float: left;
+  width: 460rpx;
+  height: auto;
+  margin-left: 30rpx;
+}
+
+.integral .v_2 .vi_1 {
+  width: 460rpx;
+  height: 55rpx;
+}
+.integral .v_2 .vi_1 text{
+font-size: 16rpx;
+color: #333333;
+line-height: 90rpx;
+}
+.integral .v_2 .vi_2 {
+  width: 460rpx;
+  height: 26rpx;
+}
+.integral .v_2 .vi_2  input{
+  float: left;
+  width: 74rpx;
+  line-height: 26rpx;
+  height: 26rpx;
+  border: 1rpx solid #999999;
+  border-radius: 4rpx;
+  font-size: 16rpx;
+  color: #FA5A4C;
+  text-align: center;
+  margin: 0 8rpx;
+}
+.integral .v_2 .vi_2 text{
+  float: left;
+font-size: 16rpx;
+color: #333333;
+height: 26rpx;
+line-height: 26rpx;
+}
+.integral .v_3{
+   width: 34rpx;
+   height: 34rpx;
+   float: right;
+}
+.integral  .v_3 text{
+  width: 34rpx;
+  height: 34rpx;
+}
+.pay{
+  width: 750rpx;
+  height: auto;
+  margin-top: 20rpx;
+  overflow: hidden;
+}
+.pay .confirm{
+  float: right;
+  width: 490rpx;
+  height: 100rpx;
+  background-color: #FA5A4C;
+  color: #ffffff;
+  font-size:30rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.pay .real_pay{
+  float: left;
+  width: 260rpx;
+  height: 100rpx;
+}
+.pay .real_pay text{
+  float: left;
+  width: 100rpx;
+  text-align: center;
+  font-size: 24rpx;
+}
+.pay .real_pay .text1{
+   width: 100%;
+   height: 32rpx;
+   margin-top: 30rpx;
+}
+.pay .real_pay .text2{
+   width: 100%;
+   height: 32rpx;
+   color: #FA5A4C;
+}
+#in_p{
+  height: 26rpx;
+}

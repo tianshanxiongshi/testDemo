@@ -1,0 +1,59 @@
+/* components/goods-item/goods-item.wxss */
+.goods-item {
+  padding: 30rpx 0;
+  /* border-bottom: 1px solid #e8e8e8; */
+  display: flex;
+  justify-content: space-between;
+}
+.goods-item image {
+  height: 172rpx;
+  width: 172rpx;
+  background: #e8e8e8;
+  margin-right: 23rpx;
+}
+.goods-item .item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5rpx 0;
+}
+.item-info .title {
+  font-size: 24rpx;
+	letter-spacing: 3rpx;
+	color: #333333;
+  font-weight: 600;
+}
+.item-info .activity {
+  display: flex;
+}
+.item-info .activity text {
+  padding: 0 14rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  border:1px solid #c78c00;
+  color: #c78c00;
+  border-radius: 6rpx;
+  font-size: 18rpx;
+  margin-right: 9rpx;
+}
+.item-info .activity text.seckill {
+  color: #fa5a4c;
+  border-color: #fa5a4c;
+  font-size: 20rpx;
+}
+.attr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.attr text {
+  font-size: 20rpx;
+	letter-spacing: 3rpx;
+	color: #999999;
+  font-weight: 600;
+}
+.attr text.money {
+  font-size: 24rpx;
+  color: #fa5a4c;
+}

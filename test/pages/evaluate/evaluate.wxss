@@ -1,0 +1,136 @@
+/* pages/evaluate/evaluate.wxss */
+page {
+  height: 100%;
+}
+.page {
+  min-height: 100%;
+  background: #f3f5fa;
+}
+.base-color {
+  color: #fa5a4c!important;
+}
+.goods {
+  padding: 16rpx 31rpx 19rpx;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+}
+.goods-img {
+  height: 90rpx;
+  width: 90rpx;
+  margin-right: 12rpx;
+  background: #f3f5fa;
+}
+.goods-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rpx 0;
+}
+.goods-info view {
+  font-size: 20rpx;
+	letter-spacing: 2rpx;
+	color: #999999;
+  font-weight: 600;
+}
+.goods-info .attr {
+  font-size: 18rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.section {
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+  padding-bottom: 158rpx;
+}
+textarea {
+  padding: 31rpx 29rpx;
+  color: #333;
+  font-size: 28rpx;
+  width: 692rpx;
+  min-height: 100rpx;
+  height: auto;
+}
+.area-style {
+  font-size: 26rpx;
+	color: #999999;
+  font-weight: 600;
+}
+.img-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 29rpx;
+}
+.img-list image {
+  width: 150rpx;
+  height: 150rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.uploadImg {
+  position: absolute;
+  left: 20rpx;
+  bottom: 32rp;
+}
+.uploadImg image {
+  height: 132rpx;
+  width: 132rpx;
+}
+.star {
+  background: #fff;
+  padding: 47rpx 0 0 33rpx;
+  overflow: hidden;
+}
+.good-pj {
+  height: 27rpx;
+  width: 27rpx;
+  background: #f3f5fa
+}
+.starOne {
+  margin-bottom: 62rpx;
+  display:flex;
+  align-items:center;
+}
+.starOne view {
+  display: inline-block;
+}
+.starOne view.info {
+  margin-right: 60rpx;
+  font-size: 28rpx;
+	color: #333333;
+  font-weight: 600;
+  display:flex;
+  align-items:center;
+}
+.starOne view.info image {
+  margin-right: 12rpx;
+}
+.btn-area {
+  padding:186rpx 88rpx 171rpx;
+  position: relative;
+}
+.btn-area button {
+  background: #fa5a4c;
+  color: #fff;
+  font-size: 30rpx;
+  letter-spacing: 4rpx;
+  font-weight: 600;
+}
+.btn-area view {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  font-size: 24rpx;
+	color: #fa5a4c;
+  font-weight: 600;
+  top: 120rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.button-hover {
+  background-color: rgba(250, 90, 76, 1);
+  opacity: 0.7;
+}

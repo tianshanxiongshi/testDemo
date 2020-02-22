@@ -1,0 +1,10 @@
+/* components/goods-list/goods-list.wxss */
+.goods-list {
+  padding: 0 30rpx;
+}
+.gItem {
+  border-bottom: 1px solid #e8e8e8;
+}
+.gItem:last-child {
+  border:none;
+}

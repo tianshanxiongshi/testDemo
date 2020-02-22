@@ -1,0 +1,34 @@
+<!--pages/pay-result/pay-result.wxml-->
+<view class="page">
+  <!-- 充值成功 -->
+  <view class="result" wx:if="{{ type == 1 }}">
+    <view><image class="success" src="../../images/recharge-success.png"></image>充值成功</view> 
+    <view class="balance">当前卡上余额： <text class="color-style-1">{{ memberMoney }}元</text> </view>
+    <button plain="true" bindtap='goIndex'>返回首页</button>
+    <button plain="true" bindtap='goOrder'>查看订单</button>
+  </view>
+  <!-- 充值失败 -->
+  <view class="result" wx:elif="{{ type == 2 }}">
+    <view><image class="success" src="../../images/recharge-fail.png"></image>充值失败</view>
+    <view class="balance color-style-1">失败原因： 支付失败，请重试 </view> 
+    <button plain="true" bindtap='goIndex'>返回首页</button>
+  </view>
+  <!-- 购买成功 -->
+  <!-- <view class="result">
+    <view><image class="success2" src="../../images/success.png"></image>购买成功</view>
+    <button plain="true">返回商品详情</button>
+    <button plain="true">查看订单</button>
+    <view class="bottom">
+      <view class="mg-btm">该商品预约门店为：深圳驰宝宝马5S店</view>
+      <view>预约时间为：2018-08-05  12:00-13:00</view>
+    </view>
+  </view> -->
+  <!-- 购买失败 -->
+  <!-- <view class="result">
+    <view><image class="success2" src="../../images/fail.png"></image>购买失败</view>
+    <button plain="true">返回商品详情</button>
+    <view class="bottom">
+      <view class="color-style-1">失败原因：支付失败，请重试</view>
+    </view>
+  </view> -->
+</view>

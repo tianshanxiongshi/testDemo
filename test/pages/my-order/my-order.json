@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "base-modal": "/components/mask/mask",
+    "empty-modal": "/components/Empty/empty"
+  }
+}

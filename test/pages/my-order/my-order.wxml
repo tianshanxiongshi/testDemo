@@ -1,0 +1,56 @@
+<!--pages/my-order/my-order.wxml-->
+<view class="page">
+  <!-- <button data-item="123" bindtap='onshowModal'>弹框</button> -->
+  <view class="nav">
+    <view class="checked" bindtap='uninstall'>待安装</view>
+    <view bindtap='finished'>已完成</view>
+  </view>
+  <view class="content">
+    <view class="order-item" wx:for="{{ stayInstallArr }}" wx:index="{{ index }}">
+      <view class="item-top">
+        <text>订单编号:2621655626</text>
+        <text class="base-color">待安装</text>
+        <!-- <text class="base-color">待评价</text>
+        <text class="finished-color">已评价</text> -->
+      </view>
+      <view class="item-info">
+        <view class="goodsImg"><image src=""></image></view>
+        <view class="goodsInfo">
+          <view class="name">美国将军轮胎 ALTIMAX GC5</view>
+          <view class="activity">
+            <view class="seckill">秒杀</view>
+            <view>满399-30</view>
+            <view>满599-50</view>
+          </view>
+          <view class="attr">
+            <view class="num">共1件</view>
+            <view class="price base-color">￥519.00</view>
+          </view>
+        </view>
+      </view>
+      <view class="item-other">
+        <view class="order-shop">
+          <text>预约门店：</text>
+          <image class="location-img" src="../../images/site.png"></image>
+          <text>宝安区大铲湾驰宝5S店</text>
+        </view>
+        <view class="order-time">
+          <view>预约时间：2018-08-23  11:30-12:30</view>
+          <!-- <view class="cancleOrder" bindtap='cancleOrder'>取消订单</view> -->
+          <view class="cancleOrder" bindtap='cancleOrder'>评价</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{ dataEmpty }}" class="empty"><empty-modal></empty-modal></view>
+    <view class="no-more">———— 没有更多了 ————</view>
+  </view>
+  <base-modal id="modal">
+    <view slot="dialog" class="modal-dialog">
+      <view class="modal-tips">确定取消您的订单？</view>
+      <view class="modal-btn">
+        <text class="cancle" catchtap="cancleModal">取消</text>
+        <text class="confirm" catchtap="confirmModal">确定</text>
+      </view>
+    </view>
+  </base-modal>
+</view>

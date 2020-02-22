@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "评价晒单",
+  "usingComponents": {
+    "top-line": "/components/tpline/tpline",
+    "i-rate":"/components/rate/index"
+  }
+}
