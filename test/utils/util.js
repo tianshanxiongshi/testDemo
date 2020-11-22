@@ -18,5 +18,6 @@ module.exports = {
   formatTime: formatTime
 }
 const test = function() {
-  console.log('hhhhhh')
+  console.log('ycx')
+  let aaa = 1;
 }
